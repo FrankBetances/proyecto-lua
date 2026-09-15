@@ -1,0 +1,27 @@
+# Pinout mapping for ESP32‑S3‑DevKitC‑1 (Lúa firmware)
+# -------------------------------------------------------
+# E-Paper SPI interface (SPI2)
+PIN_EPAPER_CS   = 10   # GPIO10 - Chip Select
+PIN_EPAPER_DC   = 9    # GPIO9  - Data/Command
+PIN_EPAPER_RST  = 8    # GPIO8  - Reset
+PIN_EPAPER_BUSY = 7    # GPIO7  - Busy (input)
+
+# Button (Wake‑up from Deep Sleep)
+PIN_BUTTON      = 0    # GPIO0 - BOOT button (configured with PULL_UP)
+
+# Speaker (I2S0) – short acoustic cues
+I2S_BCK_PIN     = 40   # GPIO40 - Bit Clock
+I2S_WS_PIN      = 41   # GPIO41 - Word Select (LRCK)
+I2S_DOUT_PIN    = 42   # GPIO42 - Data Out (to DAC)
+# Logical grouping for speaker pins
+PIN_SPEAKER     = {"bck": I2S_BCK_PIN, "ws": I2S_WS_PIN, "dout": I2S_DOUT_PIN}
+
+# MEMS Microphone – permanently disabled for privacy
+# Set pin to output LOW at boot to cut power/clock
+PIN_MIC         = 2    # GPIO2 (driven LOW in setup())
+
+# RTC (PCV85063) – I2C0
+PIN_RTC_SCL     = 18   # GPIO18
+PIN_RTC_SDA     = 19   # GPIO19
+
+# Wi‑Fi and Bluetooth are disabled in firmware for privacy‑by‑design.
