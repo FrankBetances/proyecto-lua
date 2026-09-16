@@ -1,231 +1,223 @@
-# 🤖 LÚA — Manual de Ensamble
-### Mascota Robótica · Valeria+ / VIA+ · V14 · Sept 2026
+# 🤖 LÚA — Manual de Ensamble Técnico Real
+### Mascota Robótica · Valeria+ / VIA+ · V14 (Fase 3 USC) · Septiembre 2026
 
 ---
 
 <div align="center">
 
-![Lúa — Vista frontal](../renders/muneco-frente.png)
+![Lúa — Render 3D Estilizado Oficial](../renders/render_estilizado_frente.png)
 
 </div>
 
 ---
 
-## 📦 Materiales necesarios antes de empezar
+## 📋 Introducción y Principio de Montaje
 
-| Herramienta | Qué hacer con ella |
+Este manual describe el procedimiento exacto de montaje para las **piezas reales impresas en 3D** diseñadas en [`lua-firmware/cad/lua-muneco.scad`](../lua-firmware/cad/lua-muneco.scad) para la Ender-3 S1 Pro.
+
+Todas las figuras y vistas que acompañan a esta guía son **renders 3D y capturas CAD reales del propio modelo**, eliminando cualquier ilustración genérica o inventada.
+
+---
+
+## 🗂️ 1. Inventario Oficial de Piezas Impresas (20 Piezas)
+
+![Plato Oficial de Impresión](../renders/muneco-plato.png)
+
+### Catálogo de Piezas del Muñeco:
+
+| Letra | Pieza | Archivo STL | Color Impreso | Cant. | Función en el Ensamble |
+|:---:|---|---|:---:|:---:|---|
+| **A** | **Cuerpo** | `cuerpo.stl` | ⬜ Blanco | 1 | Tronco principal. Aloja la batería, 2 insertos dorsales y cajeras de miembros. |
+| **B** | **Cabeza frontal** | `cabeza_frente.stl` | ⬜ Blanco | 1 | Cara frontal, visor circular, 4 costillas interiores y rosca trapecial M55. |
+| **C** | **Cabeza dorso** | `cabeza_dorso.stl` | ⬜ Blanco | 1 | Cúpula con respiraderos, boca de cuello y 2 espigas de centrado forzoso. |
+| **D** | **Brazo izquierdo** | `brazo_izq.stl` | 🟦/⬜ Bicolor | 1 | Brazo impreso vertical. Puño turquesa (hasta Z=16.5 mm) y hombro blanco. |
+| **E** | **Brazo derecho** | `brazo_der.stl` | 🟦/⬜ Bicolor | 1 | Brazo impreso vertical. Puño turquesa (hasta Z=16.5 mm) y hombro blanco. |
+| **F** | **Pierna izquierda** | `pierna_izq.stl` | 🟦/⬜ Bicolor | 1 | Pierna impresa vertical. Bota turquesa (hasta Z=14.0 mm) y muslo blanco. |
+| **G** | **Pierna derecha** | `pierna_der.stl` | 🟦/⬜ Bicolor | 1 | Pierna impresa vertical. Bota turquesa (hasta Z=14.0 mm) y muslo blanco. |
+| **H** | **Oreja izquierda** | `oreja_izq.stl` | 🟦 Turquesa | 1 | Oreja con espiga de anclaje para la parte superior del casco. |
+| **I** | **Oreja derecha** | `oreja_der.stl` | 🟦 Turquesa | 1 | Oreja con espiga de anclaje para la parte superior del casco. |
+| **J** | **Collar** | `collar.stl` | 🟦 Turquesa | 1 | Anillo del cuello con muesca pasante para el túnel de carga USB-C. |
+| **K** | **Mochila** | `mochila.stl` | 🟦 Turquesa | 1 | Tapa trasera asegurada con 2 tornillos métrica M2 × 8 mm. |
+| **L** | **Botón de sien** | `boton.stl` | 🟦 Turquesa | 1 | Dial estético con 3 surcos concéntricos en la sien derecha. |
+| **M** | **Emblema** | `emblema.stl` | 🟦 Turquesa | 1 | Aro de Ø22 mm centrado en el pecho. Aloja la pastilla del logo. |
+| **N** | **Logo** | `logo.stl` | ⬜ Blanco | 1 | Silueta recortada de la gata Lúa en relieve blanco dentro del emblema. |
+| **O** | **Aro visor** | `aro_visor.stl` | ⬛ Negro | 1 | Marco circular que enmarca la pantalla LCD IPS redonda. |
+| **P** | **Anillo de placa** | `anillo_placa.stl` | ⬜ Blanco | 1 | Rosca trapecial Ø55 M55. Retiene la PCB firmemente sin aplastarla. |
+| **Q** | **Cartucho batería** | `cartucho.stl` | ⬜ Blanco | 1 | Cuna interior deslizante para alojar la celda con cinta doble cara. |
+| **R** | **Pulsadores** | `pulsadores.stl` | ⬛ Negro | 1 | Embellecedor bajo barbilla para puerto USB-C y botón BOOT. |
+| **S** | **Insertos roscados M2** | — | 🟡 Latón | 2 | Insertos M2 (longitud 3-4 mm) fijados por calor en la espalda. |
+| **T** | **Tornillos M2 × 8 mm** | — | 🩶 Acero | 2 | Tornillos métricos para fijar la mochila a los insertos de latón. |
+
+---
+
+### Probetas de Calibración Previa (No van en el muñeco montado):
+
+![Probetas de Verificación](../renders/muneco-testigo.png)
+
+- **`testigo_placa.stl`**: Marco para comprobar que tu PCB entra entre las 4 costillas y que la pestaña de conectores cae en la ranura.
+- **`testigo_rosca.stl`**: Barril de 12 mm para probar que el `anillo_placa.stl` enrosca suave antes de lanzar la cabeza.
+
+---
+
+## 🔧 2. Herramientas y Materiales Necesarios
+
+| Herramienta / Material | Función en el Ensamble |
 |---|---|
-| 🔧 Soldador de punta fina | Instalar insertos de latón M2 |
-| 🧴 Cianoacrilato (Super Glue) | Pegar casco, orejas, botón, emblema |
-| 🔩 Destornillador cruceta M2 | Fijar la mochila |
-| 📏 Cinta de espuma de doble cara | Sujetar la batería al cartucho |
+| 🔧 **Soldador de punta fina** | Ajustado a ~200 °C para insertar los 2 casquillos roscados M2 en la espalda. |
+| 🧴 **Cianoacrilato de viscosidad media** | Para la unión del casco, orejas, botón de sien, emblema y extremidades. |
+| 🔩 **Destornillador Phillips M2** | Para apretar los 2 tornillos M2 × 8 mm de la mochila trasera. |
+| 📏 **Cinta de espuma de doble cara** | Para amortiguar y fijar la celda de litio dentro del cartucho. |
 
 ---
 
-## 🗂️ Inventario de Piezas (20 piezas)
-
-![Inventario de piezas](ikea_paso0_inventario.jpg)
-
-| # | Pieza | Archivo | Color | Cant. |
-|:---:|---|---|:---:|:---:|
-| A | **Cuerpo** (tronco) | `cuerpo.stl` | ⬜ Blanco | 1 |
-| B | **Cabeza frontal** (visor) | `cabeza_frente.stl` | ⬜ Blanco | 1 |
-| C | **Cabeza dorso** (cúpula) | `cabeza_dorso.stl` | ⬜ Blanco | 1 |
-| D | **Brazo izquierdo** | `brazo_izq.stl` | ⬜/🟦 Bicolor | 1 |
-| E | **Brazo derecho** | `brazo_der.stl` | ⬜/🟦 Bicolor | 1 |
-| F | **Pierna izquierda** | `pierna_izq.stl` | ⬜/🟦 Bicolor | 1 |
-| G | **Pierna derecha** | `pierna_der.stl` | ⬜/🟦 Bicolor | 1 |
-| H | **Oreja izquierda** | `oreja_izq.stl` | 🟦 Turquesa | 1 |
-| I | **Oreja derecha** | `oreja_der.stl` | 🟦 Turquesa | 1 |
-| J | **Collar** (cuello) | `collar.stl` | 🟦 Turquesa | 1 |
-| K | **Mochila** (tapa trasera) | `mochila.stl` | 🟦 Turquesa | 1 |
-| L | **Botón** (sien derecha) | `boton.stl` | 🟦 Turquesa | 1 |
-| M | **Emblema** (aro pecho) | `emblema.stl` | 🟦 Turquesa | 1 |
-| N | **Logo** (silueta Lúa) | `logo.stl` | ⬜ Blanco | 1 |
-| O | **Aro visor** | `aro_visor.stl` | ⬛ Negro | 1 |
-| P | **Anillo de placa** | `anillo_placa.stl` | ⬜ Blanco | 1 |
-| Q | **Cartucho batería** | `cartucho.stl` | ⬜ Blanco | 1 |
-| R | **Pulsadores** (barbilla) | `pulsadores.stl` | ⬛ Negro | 1 |
-| S | **Insertos latón M2** | — | 🟡 Latón | 2 |
-| T | **Tornillos M2 × 8 mm** | — | 🩶 Acero | 2 |
+## 🔨 3. Procedimiento de Ensamble Paso a Paso (Secuencia Real)
 
 ---
 
-> **Vista de todas las piezas separadas** — Referencia visual del modelo 3D antes del ensamble.
+### PASO 1 · Instalación de los Insertos Térmicos M2 en la Espalda
 
-![Render de piezas separadas](../renders/muneco-plato.png)
+![Vista Trasera — Posición de la Mochila e Insertos](../renders/muneco-atras.png)
 
----
-
-## 🔨 Proceso de Ensamble
-
----
-
-### PASO 1 · Insertos de calor en el cuerpo
-
-![Paso 1 — Insertos de calor](ikea_paso1_insertos.jpg)
-
-> ⚠️ **CALOR** — El soldador estará a ~200 °C. No tocar la punta. No forzar el inserto; debe hundirse suavemente con el calor residual.
-
-- Calienta el soldador.
-- Coloca el `cuerpo.stl` boca abajo sobre una superficie plana.
-- Apoya un **inserto de latón M2** sobre cada una de las **2 cajeras dorsales** (orificios en la espalda).
-- Presiona suavemente con la punta del soldador hasta que el inserto quede al ras o ligeramente hundido.
-- Repite con el segundo inserto.
-- Deja enfriar **2 minutos** antes de continuar.
+1. Enchufa el soldador de punta fina a **~200 °C**.
+2. Apoya el `cuerpo.stl` boca abajo sobre una mesa firme y plana.
+3. Coloca un inserto roscado de latón M2 sobre cada uno de los dos orificios de la espalda (cajeras de la mochila).
+4. Apoya suavemente la punta del soldador sobre el inserto. Deja que el calor residual reblandezca el PLA: **el inserto debe descender por calor, nunca forzado a golpes**.
+5. Deja que quede enrasado con la superficie. Retira el soldador y deja enfriar **2 minutos** sin moverlo.
 
 ---
 
-### PASO 2 · Deslizar el collar al cuello
+### PASO 2 · Deslizar el Collar al Cuello (¡ANTES de Pegar la Cabeza!)
 
-![Paso 2 — Collar](ikea_paso2_collar.jpg)
+![Macro del Collar y Ranura USB-C](../renders/render_collar_usbc_macro.png)
 
-> ⚠️ **HAZ ESTO ANTES DE PEGAR LA CABEZA.** Una vez el casco esté pegado, ya no podrás insertar el collar desde arriba.
+> ⛔ **REGLA CRÍTICA DE MONTAJE:**  
+> El `collar.stl` (anillo turquesa) **DEBE** deslizarse por la espiga del cuello antes de montar la cabeza. Si colocas o pegas la cabeza sin el collar, no podrás introducirlo después.
 
-- Toma el `collar.stl` (anillo turquesa).
-- Localiza la **muesca / ranura** en el interior del collar.
-- Desliza el collar por el cuello del `cuerpo.stl` con la **muesca apuntando hacia el frente**.
-- No uses pegamento aquí; el collar debe quedar libre.
-
----
-
-### PASO 3 · Montar la electrónica en la cabeza frontal
-
-![Paso 3 — PCB en cabeza](ikea_paso3_pcb.jpg)
-
-**3a — Insertar la placa:**
-- Introduce la placa ESP32-S3 (con pantalla circular mirando hacia fuera) en el `cabeza_frente.stl`.
-
-**3b — Roscar el anillo:**
-- Introduce el `anillo_placa.stl` por detrás de la cabeza.
-- Enrosca **con los dedos** en sentido horario hasta tope firme.
-- **No uses herramientas.**
+1. Toma el `collar.stl`.
+2. Observa la **muesca pasante** que tiene en su borde frontal.
+3. Deslízalo por el cuello cilíndrico del `cuerpo.stl` asegurando que la muesca apunte **hacia el frente**, justo donde desemboca el túnel de carga USB-C.
+4. **NO uses pegamento**: el collar debe quedar libre para girar suavemente.
 
 ---
 
-### PASO 4 · Cerrar el casco
+### PASO 3 · Montaje de la Electrónica en `cabeza_frente.stl`
 
-![Paso 4 — Cierre del casco](ikea_paso4_casco.jpg)
+![Detalle de Retención por Rosca M55](../renders/muneco-testigo.png)
 
-> ⚠️ **Una vez aplicado el pegamento, no hay marcha atrás.** Ensaya el encaje en seco primero.
+1. **Presentación de la PCB:**  
+   Introduce la placa ESP32-S3 por la parte trasera de `cabeza_frente.stl`. La pantalla redonda IPS debe apoyar en los 4 topes frontales del visor y quedar centrada entre las 4 costillas perimetrales.
+2. **Orientación de Conectores:**  
+   Verifica que el canto de los conectores (USB-C y pulsadores) quede orientado hacia abajo, en la ranura bajo la barbilla.
+3. **Fijación con `anillo_placa.stl`:**  
+   Introduce el `anillo_placa.stl` por detrás de la placa en el barril roscado M55.
+4. Enrosca en sentido horario **únicamente con dos dedos por las alas de apriete, a mano y sin herramientas**.  
+   *Nota: La rosca absorbe holguras entre 8 y 16 mm. Un apriete a mano sujeta firmemente la placa sin doblarla.*
 
-- Aplica cianoacrilato en la pestaña de unión del `cabeza_dorso.stl`.
-- Encaja las **2 espigas de centrado** en sus **2 orificios**.
-- Presiona firmemente **30–60 segundos**.
-- Deja reposar **5 minutos**.
+---
 
-| Vista frontal | Vista trasera | Vista lateral |
+### PASO 4 · Cierre y Sellado del Casco
+
+| Vista Lateral CAD | Vista Frontal CAD | Vista Trasera CAD |
 |:---:|:---:|:---:|
-| ![Frente](../renders/muneco-frente.png) | ![Atrás](../renders/muneco-atras.png) | ![Lado](../renders/muneco-lado.png) |
+| ![Lado](../renders/muneco-lado.png) | ![Frente](../renders/muneco-frente.png) | ![Atrás](../renders/muneco-atras.png) |
+
+> ⚠️ **ENSAYO EN SECO:**  
+> Las dos mitades de la cabeza llevan **2 espigas de centrado** en la junta de unión. Encájalas en seco primero para comprobar que entran suavemente. Si rozan, pasa una lija fina por las espigas.
+
+1. Aplica una fina hilera de cianoacrilato en la pestaña de unión perimetral de `cabeza_dorso.stl`.
+2. Encaja `cabeza_dorso.stl` contra `cabeza_frente.stl` haciendo coincidir las 2 espigas en sus orificios.
+3. Presiona firmemente ambas mitades durante **45 a 60 segundos**.
+4. Deja curar **5 minutos**.  
+   *(Esta junta no se vuelve a abrir: los cables no deben sufrir fatiga).*
 
 ---
 
-### PASO 5 · Aro visor y orejas
+### PASO 5 · Instalación de Accesorios de Cabeza
 
-![Paso 5 — Visor y orejas](ikea_paso5_visor_orejas.jpg)
+![Vista de Perfil — Orejas y Botón de Sien](../renders/muneco-lado.png)
 
-**5a — Aro visor (negro):**
-- Cianoacrilato en reverso del `aro_visor.stl` → centrar sobre pantalla → presionar 15 s.
-
-**5b — Orejas (turquesa):**
-- Cianoacrilato en espiga → introducir en hueco superior izquierdo → 15 s.
-- Repetir con oreja derecha.
-
-**5c — Botón lateral:**
-- Pegar `boton.stl` en la sien derecha.
+1. **Aro del Visor (`aro_visor.stl`):**  
+   Aplica una gota mínima de cianoacrilato en el reverso del marco negro y pégalo alrededor del cristal de la pantalla en la cara frontal.
+2. **Orejas (`oreja_izq.stl` y `oreja_der.stl`):**  
+   Aplica adhesivo en las espigas de las orejas turquesas e insértalas en los huecos superiores del casco. Presiona 15 s.
+3. **Botón de Sien (`boton.stl`):**  
+   Pega el disco turquesa con los 3 surcos concéntricos en el rebaje de la sien derecha. *(Es un dial estético de traje espacial).*
 
 ---
 
-### PASO 6 · Emblema del pecho
+### PASO 6 · Emblema y Logo en el Pecho
 
-![Paso 6 — Emblema](ikea_paso6_emblema.jpg)
+![Macro Oficial del Emblema y Logo](../renders/render_pecho_logo.png)
 
-![Detalle emblema terminado](../renders/muneco-logo.png)
+![Detalle CAD del Logo Centrado](../renders/muneco-logo.png)
 
-**6a:** Cianoacrilato en hueco del `emblema.stl` → presionar `logo.stl` dentro → esperar 2 min.
-
-**6b:** Cianoacrilato en reverso del conjunto → pegar **centrado** en el pecho del cuerpo.
-
----
-
-### PASO 7 · Batería y mochila
-
-![Paso 7 — Batería y mochila](ikea_paso7_bateria.jpg)
-
-1. Cinta de espuma doble cara en base del `cartucho.stl` → pegar celda de litio.
-2. Insertar cartucho+batería en compartimento interior del cuerpo → conectar MX1.25.
-3. Colocar `mochila.stl` → 2 tornillos M2×8 mm → apretar suavemente.
+1. **Subensamble del Logo:**  
+   Aplica una microgota de cianoacrilato en el hueco interior de `emblema.stl` (aro turquesa de Ø22 mm).
+2. Encaja la pastilla `logo.stl` (silueta blanca en relieve de Lúa) dentro del aro. Espera 2 minutos.
+3. **Fijación al Torso:**  
+   Aplica cianoacrilato en la cara trasera del emblema y pégalo **perfectamente centrado en el pecho** del `cuerpo.stl`. El modelo V14 tiene el asiento adelantado +1,9 mm para que asiente al ras.
 
 ---
 
-### PASO 8 · Brazos y piernas
+### PASO 7 · Batería de Litio y Fijación de la Mochila
 
-![Paso 8 — Miembros](ikea_paso8_miembros.jpg)
+![Espalda con Mochila y 2 Tornillos M2](../renders/muneco-atras.png)
 
-> Turquesa siempre **hacia abajo** (puños y botas). Blanco hacia arriba (hombros y piernas).
-
-Cianoacrilato en cada espiga → introducir en cajera correspondiente → presionar 15 s cada una.
-Dejar secar **10 minutos** boca arriba.
-
----
-
-### PASO 9 · Pulsadores bajo barbilla *(opcional)*
-
-> ⚠️ Solo si las cotas de tu placa coinciden. Si no entra sin forzar, omite este paso.
-
-- Deslizar `pulsadores.stl` en la ranura bajo la barbilla. No requiere pegamento.
+1. Coloca una tira de cinta de espuma doble cara en la cuna de `cartucho.stl` y pega la celda de litio firmemente.
+2. Desliza el cartucho con la batería en la bahía interna del cuerpo.
+3. Conecta el cable con conector MX1.25 a la placa dentro de la cabeza.
+4. Coloca la `mochila.stl` sobre la espalda y atornilla los **2 tornillos M2 × 8 mm** en los insertos de latón instalados en el Paso 1.
+   *(El doble tornillo garantiza que la tapa no pivote y protege la celda de manipulación infantil).*
 
 ---
 
-### PASO 10 · Colocar la cabeza sobre el cuerpo
+### PASO 8 · Extremidades Bicolor (Brazos y Piernas)
 
-- Muesca del collar al frente (zona USB-C libre).
-- Bajar el casco sobre el cuello del cuerpo.
-- **El casco no se pega** — queda apoyado y es desmontable.
+![Lúa Terminada en Vista Isométrica](../renders/render_estilizado_iso.png)
 
----
-
-## ✅ Resultado Final
-
-![Lúa terminada — Vista isométrica](../renders/muneco-iso.png)
-
-![¡Lista!](ikea_paso9_final.jpg)
+1. Comprueba la orientación de las piezas:
+   - **Puños y Botas (Turquesa):** Miran siempre hacia abajo.
+   - **Hombros y Muslos (Blanco):** Encajan en las cajeras del tronco.
+2. Aplica cianoacrilato en la espiga y cara plana de `brazo_izq.stl` e insértalo en la cajera del hombro izquierdo. Presiona 20 s.
+3. Repite el proceso con `brazo_der.stl`, `pierna_izq.stl` y `pierna_der.stl`.
+4. Deja reposar el muñeco acostado boca arriba durante **10 minutos** para curado químico completo.
 
 ---
 
-## 🔌 Puerto de carga USB-C
+### PASO 9 · Túnel de Carga USB-C y Pulsadores
 
-![Puerto USB-C](../renders/muneco-carga.png)
+| Túnel de Carga USB-C bajo Barbilla | Pulsadores REST / BOOT |
+|:---:|:---:|
+| ![Túnel de Carga](../renders/muneco-carga.png) | ![Pulsadores Barbilla](../renders/muneco-botones.png) |
 
-Cable USB-C por la **ranura de 16 mm bajo la barbilla** sin desmontar la figura.
-
----
-
-## 🔘 Botones de control
-
-![Zona de pulsadores](../renders/muneco-botones.png)
-
-Botones `REST` y `BOOT` accesibles a través de `pulsadores.stl` bajo la barbilla.
+1. **Acceso USB-C:**  
+   La ranura pasante bajo la barbilla permite conectar directamente un cable estándar USB-C sin tener que desmontar el muñeco.
+2. **Pulsadores:**  
+   Si tu placa física coincide con las cotas del proveedor, la pieza `pulsadores.stl` se inserta bajo la barbilla para guiar el conector USB-C y proteger los botones `REST` (agujero de aguja) y `BOOT` (tecla activa de interacción).
 
 ---
 
-## ⚠️ Advertencias
+### PASO 10 · Colocación de la Cabeza sobre el Cuerpo
 
-- 🔥 El cianoacrilato es permanente. Ensaya en seco antes de pegar.
-- 🔩 No sobreaprietes los tornillos M2. El PLA se puede agrietar.
-- ⚡ Litio-Ion: no cortes ni perfores la batería. En caso de hinchazón, retira y desecha correctamente.
+![Muñeco Ensamblado — Frente](../renders/render_estilizado_frente.png)
 
----
-
-## 📐 Tolerancias de referencia
-
-| Zona | Tolerancia diseñada |
-|---|---|
-| Rosca M55 (anillo placa) | ±0,2 mm — dedos únicamente |
-| Espigas de orejas | Presión sin pegamento *(comprueba primero)* |
-| Cajeras de brazos/piernas | Pegamento necesario |
-| Insertos M2 | Soldador, sin presión mecánica |
+- El casco **NO se pega al cuerpo**.
+- La boca cilíndrica del cuello encaja por gravedad y fricción sobre la espiga superior del tronco.
+- Esto permite:
+  - Girar la cabeza para orientar la mirada.
+  - Desmontar la cabeza tirando hacia arriba en cualquier momento para inspeccionar la electrónica sin romper la figura.
 
 ---
 
-*Manual generado · Proyecto Lúa V14 · Valeria+ / VIA+ · USC Fase 3 · Sept 2026*
+## 📐 4. Tolerancias y Directrices de Seguridad
+
+| Zona Mecánica | Tolerancia CAD | Recomendación de Taller |
+|---|:---:|---|
+| **Rosca M55 (anillo_placa)** | ±0,30 mm | Roscar a mano. Si ofrece resistencia, repasar la costura con un cepillo. |
+| **Espigas de centrado casco** | Ø2,4 mm | No forzar. Si la junta no cierra a ras, rebajar ligeramente la espiga con lija. |
+| **Cajeras de extremidades** | +0,15 mm | Diseñadas para adherencia con cianoacrilato. No dejar sin pegar. |
+| **Insertos de latón M2** | Ø3,2 mm | No introducir mecánicamente en frío; utilizar siempre el calor del soldador. |
+
+---
+
+*Manual técnico oficial · Proyecto Lúa V14 · Valeria+ / VIA+ · Tesis Doctoral USC 2023–2027*
