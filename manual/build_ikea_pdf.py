@@ -529,18 +529,18 @@ def build_manual():
     p5.draw_image('step6', 40, 50, 327, 360)
     p5.draw_dashed_arrow(140, 230, 185, 230)
 
-    p5.draw_text("1. Subensamble del Logo: Aplica una microgota de", 385, PAGE_H - 505, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p5.draw_text("   cianoacrilato en el rebaje interior de emblema.stl.", 385, PAGE_H - 517, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p5.draw_text("2. Encaja la pastilla logo.stl (silueta blanca en relieve).", 385, PAGE_H - 533, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p5.draw_text("3. Fijacion al Torso: Pega el conjunto en el asiento esferico", 385, PAGE_H - 549, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p5.draw_text("   del pecho de cuerpo.stl, exactamente centrado a x = 0.", 385, PAGE_H - 561, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p5.draw_text("1. Subensamble del Logo: Encaja la pastilla logo.stl", 385, PAGE_H - 505, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p5.draw_text("   (silueta blanca en relieve) en el frente del emblema.", 385, PAGE_H - 517, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p5.draw_text("2. Ensamble tipo Lego al Pecho: El reverso del emblema", 385, PAGE_H - 533, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p5.draw_text("   cuenta con un teton macho (stud) press-fit.", 385, PAGE_H - 545, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p5.draw_text("3. Encaja el emblema a presion en la cajeta del pecho", 385, PAGE_H - 559, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p5.draw_text("   hasta asentar a ras. Cero pegamento.", 385, PAGE_H - 571, font='/F2', size=8.5, rgb=(0.0, 0.318, 0.729))
 
-    p5.draw_alert_box(385, PAGE_H - 680, 175, 105, "* CENTRADO V15 (x = 0)",
-                      ["\xb7 El modelo V15 adelanta el asiento",
-                       "  +1,9 mm y lo centra a x = 0.",
-                       "\xb7 Asienta al ras de la curva del pecho.",
-                       "\xb7 Asegurar que la silueta de la gata",
-                       "  apunta erguida hacia arriba."],
+    p5.draw_alert_box(385, PAGE_H - 680, 175, 95, "* ENCAJE LEGO STUD (x = 0)",
+                      ["\xb7 Teton macho trasero de 1.8 mm.",
+                       "\xb7 Cajeta hembra con holgura 0.15 mm.",
+                       "\xb7 Asienta a presion firme con el pulgar.",
+                       "\xb7 Silueta de la gata erguida hacia arriba."],
                       color_rgb=(0.15, 0.65, 0.35))
 
     pdf.add_page(p5.get_stream())
@@ -584,18 +584,17 @@ def build_manual():
     p6.draw_dashed_arrow(285, 130, 240, 155)
 
     p6.draw_text("1. Orientacion: Punos y botas turquesas miran hacia ABAJO.", 385, PAGE_H - 505, font='/F2', size=8.5, rgb=(0.0, 0.318, 0.729))
-    p6.draw_text("2. Brazos: empuja a presion brazo_izq / brazo_der en su", 385, PAGE_H - 521, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p6.draw_text("   cajera de hombro hasta que la cara plana asiente.", 385, PAGE_H - 533, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p6.draw_text("3. Piernas: igual con pierna_izq / der en las cajeras", 385, PAGE_H - 549, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p6.draw_text("   inferiores. Sin pegamento en ningun miembro.", 385, PAGE_H - 561, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p6.draw_text("4. Comprobar que ningun miembro gira loco en su cajera.", 385, PAGE_H - 575, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p6.draw_text("2. Espigas Tipo Lego: Brazos (espiga D6 mm) y piernas", 385, PAGE_H - 521, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p6.draw_text("   (espiga D7 mm) llevan vastagos machos con bisel guia.", 385, PAGE_H - 533, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p6.draw_text("3. Empuja a presion cada miembro en su cajeta hembra", 385, PAGE_H - 549, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p6.draw_text("   del torso hasta que la cara plana asiente a ras.", 385, PAGE_H - 561, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p6.draw_text("4. Fijacion por friccion mecanica: CERO pegamento.", 385, PAGE_H - 575, font='/F2', size=8.5, rgb=(0.8, 0.1, 0.1))
 
-    p6.draw_alert_box(385, PAGE_H - 680, 175, 95, "PRESION 0.15 SIN PEGAMENTO",
-                      ["\xb7 Las cajeras llevan 0,15 mm radiales",
-                       "  y entran a presion a mano.",
-                       "\xb7 Si un vastago no entra, lija fina",
-                       "  al vastago, nunca al agujero.",
-                       "\xb7 El giro se impide por friccion."],
+    p6.draw_alert_box(385, PAGE_H - 680, 175, 95, "PRESS-FIT LEGO SIN PEGAMENTO",
+                      ["\xb7 Espigas machos D6 (brazo) y D7 (pierna).",
+                       "\xb7 Cajetas hembras con holgura 0,15 radial.",
+                       "\xb7 Entrada suave gracias al bisel frontal.",
+                       "\xb7 Asiento plano firme e inmovil."],
                       color_rgb=(0.85, 0.35, 0.1))
 
     pdf.add_page(p6.get_stream())
