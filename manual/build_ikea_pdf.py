@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Official IKEA Manual PDF Builder for Lúa Mascot (Valeria+ / VIA+ · V14)
+Official IKEA Manual PDF Builder for Lúa Mascot (Valeria+ / VIA+ · V15)
 Builds an authentic, 8-page, publication-grade IKEA assembly manual
 using pure Python standard library and real line-art CAD diagrams.
 """
@@ -159,7 +159,7 @@ class PageCanvas:
         self.add("/F2 16 Tf 0.05 0.05 0.08 rg\n")
         self.add(f"36 {PAGE_H - 36:.2f} Td (L\xdaA) Tj\n")
         self.add("/F1 9 Tf 0.35 0.35 0.38 rg\n")
-        self.add("50 0 Td (Mascota Rob\xf3tica \xb7 Valeria+ / VIA+ \xb7 V14) Tj\n")
+        self.add("50 0 Td (Mascota Rob\xf3tica \xb7 Valeria+ / VIA+ \xb7 V15) Tj\n")
         self.add("ET\n")
         self.add("BT\n")
         self.add(f"/F2 9 Tf 0.2 0.2 0.2 rg\n")
@@ -173,7 +173,7 @@ class PageCanvas:
         self.add(f"36 32 m {PAGE_W - 36:.2f} 32 l S\n")
         self.add("BT\n")
         self.add("/F1 8 Tf 0.45 0.45 0.48 rg\n")
-        self.add("36 20 Td (Manual de ensamble oficial \xb7 Proyecto L\xfaa V14 \xb7 USC / ACOPROS 2023-2027) Tj\n")
+        self.add("36 20 Td (Manual de ensamble oficial \xb7 Proyecto L\xfaa V15 \xb7 USC / ACOPROS 2023-2027) Tj\n")
         self.add(f"{PAGE_W - 170:.2f} 20 Td (Frank Betances \xb7 Ender-3 S1 Pro) Tj\n")
         self.add("ET\n")
         self.add("Q\n")
@@ -283,13 +283,13 @@ def build_manual():
     diagram_files = {
         'cover': 'mascot_full_cover.jpg',
         'overview': 'parts_overview_plate.jpg',
-        'step1': 'step1_inserts.jpg',
+        'step1': 'step1_pernos.jpg',
         'step2': 'step2_collar.jpg',
         'step3': 'step3_pcb_thread.jpg',
-        'step4': 'step4_head_halves.jpg',
-        'step5': 'step5_head_accessories.jpg',
+        'step4': 'step4_bayoneta.jpg',
+        'step5': 'step5_oreja.jpg',
         'step6': 'step6_chest_emblem.jpg',
-        'step7': 'step7_battery_backpack.jpg',
+        'step7': 'step7_mochila.jpg',
         'step8': 'step8_limbs.jpg',
         'step9': 'step9_chin_port.jpg',
         'step10': 'step10_final_assembly.jpg',
@@ -306,7 +306,7 @@ def build_manual():
     p1.draw_text("Technical Robotics Collection \xb7 Fase 3 USC", 188, PAGE_H - 80, font='/F1', size=9, rgb=(0.4, 0.4, 0.4))
 
     p1.draw_text("L\xdaA", 36, PAGE_H - 165, font='/F2', size=58, rgb=(0.05, 0.05, 0.08))
-    p1.draw_text("Manual de Ensamble F\xedsico Oficial \xb7 20 Piezas STL", 36, PAGE_H - 186, font='/F2', size=14, rgb=(0.0, 0.318, 0.729))
+    p1.draw_text("Manual de Ensamble F\xedsico Oficial \xb7 21 Piezas STL", 36, PAGE_H - 186, font='/F2', size=14, rgb=(0.0, 0.318, 0.729))
     p1.draw_text("Ender-3 S1 Pro \xb7 Boquilla 0.4 mm \xb7 Maqueta Cl\xednica Pedi\xe1trica Valeria+ / VIA+", 36, PAGE_H - 202, font='/F1', size=10, rgb=(0.35, 0.35, 0.38))
 
     p1.draw_rect(36, 215, PAGE_W - 72, 405, fill_rgb=(0.99, 0.99, 1.0), stroke_rgb=(0.88, 0.88, 0.9), stroke_w=1)
@@ -315,9 +315,9 @@ def build_manual():
     p1.draw_rect(36, 42, 250, 155, fill_rgb=(0.97, 0.98, 0.99), stroke_rgb=(0.82, 0.85, 0.88), stroke_w=1)
     p1.draw_rect(36, 172, 250, 25, fill_rgb=(0.0, 0.318, 0.729))
     p1.draw_text("HERRAMIENTAS REQUERIDAS", 46, 180, font='/F2', size=9.5, rgb=(1, 1, 1))
-    p1.draw_text("[OK] Soldador fino regulado a 200 \xb0C (insertos)", 46, 154, font='/F1', size=8.5, rgb=(0.15, 0.15, 0.15))
-    p1.draw_text("[OK] Destornillador Phillips / Plano M2", 46, 137, font='/F1', size=8.5, rgb=(0.15, 0.15, 0.15))
-    p1.draw_text("[OK] Cianoacrilato de viscosidad media", 46, 120, font='/F1', size=8.5, rgb=(0.15, 0.15, 0.15))
+    p1.draw_text("[OK] Lija fina grano 220 (solo vastagos)", 46, 154, font='/F1', size=8.5, rgb=(0.15, 0.15, 0.15))
+    p1.draw_text("[OK] Sin herramientas: todo entra a presion", 46, 137, font='/F1', size=8.5, rgb=(0.15, 0.15, 0.15))
+    p1.draw_text("[OK] Ciano (solo aro, boton y logo)", 46, 120, font='/F1', size=8.5, rgb=(0.15, 0.15, 0.15))
     p1.draw_text("[OK] Cinta de espuma doble cara (bater\xeda)", 46, 103, font='/F1', size=8.5, rgb=(0.15, 0.15, 0.15))
     p1.draw_text("[NO] Martillos, alicates o llaves inglesas", 46, 75, font='/F2', size=8.5, rgb=(0.75, 0.1, 0.1))
     p1.draw_text("El modelo est\xe1 dise\xf1ado para tolerancias finas FDM.", 46, 58, font='/F1', size=7.5, rgb=(0.4, 0.4, 0.4))
@@ -326,19 +326,19 @@ def build_manual():
     p1.draw_rect(300, 172, PAGE_W - 336, 25, fill_rgb=(0.08, 0.08, 0.1))
     p1.draw_text("REGLAS CLAVE DE MONTAJE", 310, 180, font='/F2', size=9.5, rgb=(1, 1, 1))
     p1.draw_text("1. Ensayo en seco: Comprueba todas las uniones", 310, 154, font='/F1', size=8.5, rgb=(0.15, 0.15, 0.15))
-    p1.draw_text("   antes de aplicar cianoacrilato definitivo.", 310, 142, font='/F1', size=8.5, rgb=(0.15, 0.15, 0.15))
+    p1.draw_text("   antes de cerrar cada union press-fit o bayoneta.", 310, 142, font='/F1', size=8.5, rgb=(0.15, 0.15, 0.15))
     p1.draw_text("2. Cuello m\xf3vil: El collar y la cabeza NO van pegados", 310, 126, font='/F1', size=8.5, rgb=(0.15, 0.15, 0.15))
     p1.draw_text("   al cuerpo para permitir giro y servicio t\xe9cnico.", 310, 114, font='/F1', size=8.5, rgb=(0.15, 0.15, 0.15))
     p1.draw_text("3. Retenci\xf3n positiva: La rosca M55 aprieta a mano.", 310, 98, font='/F1', size=8.5, rgb=(0.15, 0.15, 0.15))
     p1.draw_text("Soporte: github.com/FrankBetances/proyecto-lua", 310, 68, font='/F2', size=8, rgb=(0.0, 0.318, 0.729))
-    p1.draw_text("Iteraci\xf3n V14 \xb7 Septiembre 2026 \xb7 Santiago de Compostela", 310, 55, font='/F1', size=7.5, rgb=(0.4, 0.4, 0.4))
+    p1.draw_text("Iteraci\xf3n V15 \xb7 Septiembre 2026 \xb7 Santiago de Compostela", 310, 55, font='/F1', size=7.5, rgb=(0.4, 0.4, 0.4))
 
     pdf.add_page(p1.get_stream())
 
     # PÁGINA 2: INVENTARIO DE PIEZAS
     p2 = PageCanvas(2, 8)
     p2.draw_text("INVENTARIO OFICIAL DE COMPONENTES", 36, PAGE_H - 65, font='/F2', size=16, rgb=(0.05, 0.05, 0.08))
-    p2.draw_text("Comprueba que tienes las 20 piezas impresas y la torniller\xeda antes de iniciar el montaje:", 36, PAGE_H - 80, font='/F1', size=9.5, rgb=(0.35, 0.35, 0.38))
+    p2.draw_text("Comprueba que tienes las 21 piezas impresas y la torniller\xeda antes de iniciar el montaje:", 36, PAGE_H - 80, font='/F1', size=9.5, rgb=(0.35, 0.35, 0.38))
 
     p2.draw_rect(36, PAGE_H - 330, PAGE_W - 72, 235, fill_rgb=(0.99, 0.99, 1.0), stroke_rgb=(0.85, 0.85, 0.88), stroke_w=1)
     p2.draw_image('overview', 44, PAGE_H - 325, PAGE_W - 88, 225)
@@ -346,17 +346,17 @@ def build_manual():
     parts_col1 = [
         ("A", "cuerpo.stl", "Tronco principal (alojamiento bater\xeda)", "1x", "Blanco"),
         ("B", "cabeza_frente.stl", "Cara frontal y rosca M55", "1x", "Blanco"),
-        ("C", "cabeza_dorso.stl", "C\xfapula con 2 espigas centrado", "1x", "Blanco"),
+        ("C", "cabeza_dorso.stl", "C\xfapula con manga de bayoneta", "1x", "Blanco"),
         ("D", "brazo_izq.stl", "Brazo izquierdo (pu\xf1o turquesa)", "1x", "Bicolor"),
         ("E", "brazo_der.stl", "Brazo derecho (pu\xf1o turquesa)", "1x", "Bicolor"),
         ("F", "pierna_izq.stl", "Pierna izquierda (bota turquesa)", "1x", "Bicolor"),
         ("G", "pierna_der.stl", "Pierna derecha (bota turquesa)", "1x", "Bicolor"),
-        ("H", "oreja_izq.stl", "Oreja izquierda con espiga", "1x", "Turquesa"),
-        ("I", "oreja_der.stl", "Oreja derecha con espiga", "1x", "Turquesa"),
+        ("H", "oreja_izq.stl", "Oreja izq. con bayoneta 1/4 vuelta", "1x", "Turquesa"),
+        ("I", "oreja_der.stl", "Oreja der. con bayoneta 1/4 vuelta", "1x", "Turquesa"),
         ("J", "collar.stl", "Anillo de cuello con muesca USB-C", "1x", "Turquesa"),
     ]
     parts_col2 = [
-        ("K", "mochila.stl", "Tapa trasera con 2 taladros M2", "1x", "Turquesa"),
+        ("K", "mochila.stl", "Tapa trasera con 2 cajeras pernos", "1x", "Turquesa"),
         ("L", "boton.stl", "Dial est\xe9tico sien derecha", "1x", "Turquesa"),
         ("M", "emblema.stl", "Aro de escudo en el pecho (\xd822 mm)", "1x", "Turquesa"),
         ("N", "logo.stl", "Silueta relieve L\xfaa (blanco)", "1x", "Blanco"),
@@ -364,8 +364,8 @@ def build_manual():
         ("P", "anillo_placa.stl", "Tuerca M55 de retenci\xf3n PCB", "1x", "Blanco"),
         ("Q", "cartucho.stl", "Cuna deslizante celda litio", "1x", "Blanco"),
         ("R", "pulsadores.stl", "Embellecedor botones bajo barbilla", "1x", "Negro"),
-        ("S", "Insertos lat\xf3n M2", "Insertos roscados termofusibles", "2x", "Lat\xf3n"),
-        ("T", "Tornillos M2\xd78 mm", "Tornillos cabeza avellanada/cil\xedndrica", "2x", "Acero"),
+        ("S", "pernos_mochila.stl", "Pernos sueltos press-fit", "2x", "Blanco"),
+        ("T", "Torniller\xeda M2", "ELIMINADA en x1: sin tornillos", "0x", "--"),
     ]
 
     def draw_parts_table(col_parts, x_start, y_start):
@@ -393,7 +393,7 @@ def build_manual():
     # PÁGINA 3: PASOS 1 & 2
     p3 = PageCanvas(3, 8)
     p3.draw_step_badge(1, 55, PAGE_H - 75)
-    p3.draw_text("INSERTOS TERMICOS M2 EN LA ESPALDA", 82, PAGE_H - 72, font='/F2', size=13, rgb=(0.05, 0.05, 0.08))
+    p3.draw_text("PERNOS PRESS-FIT EN LA ESPALDA", 82, PAGE_H - 72, font='/F2', size=13, rgb=(0.05, 0.05, 0.08))
     p3.draw_part_badge("A", "1x", 360, PAGE_H - 72)
     p3.draw_part_badge("S", "2x", 425, PAGE_H - 72)
 
@@ -403,15 +403,15 @@ def build_manual():
     p3.draw_dashed_arrow(238, PAGE_H - 245, 198, PAGE_H - 268)
 
     p3.draw_text("1. Apoya el tronco cuerpo.stl boca abajo sobre la mesa.", 385, PAGE_H - 110, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p3.draw_text("2. Coloca un casquillo de laton M2 sobre cada uno de los", 385, PAGE_H - 124, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p3.draw_text("   dos orificios a los lados de la bahia dorsal.", 385, PAGE_H - 136, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p3.draw_text("3. Aplica calor con la punta fina del soldador (~200 \xb0C).", 385, PAGE_H - 150, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p3.draw_text("4. El inserto debe descender por peso propio, NUNCA a golpes.", 385, PAGE_H - 164, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p3.draw_text("5. Dejar enfriar 2 minutos enrasado a nivel de la pared.", 385, PAGE_H - 178, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p3.draw_alert_box(385, PAGE_H - 265, 175, 78, "TEMPERATURA ~200 \xb0C",
-                      ["\xb7 No calentar en exceso el PLA.",
-                       "\xb7 Debe quedar al ras de la cara.",
-                       "\xb7 No obstruir la rosca interior."],
+    p3.draw_text("2. Clava un perno_mochila en cada taladro de la espalda", 385, PAGE_H - 124, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p3.draw_text("   (a 20.5 mm del eje), con el pico guia por delante.", 385, PAGE_H - 136, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p3.draw_text("3. Entran 3.0 mm a presion y quedan 3.6 mm fuera.", 385, PAGE_H - 150, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p3.draw_text("4. Si un perno gira loco, una vuelta de cinta de carrocero.", 385, PAGE_H - 164, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p3.draw_text("5. Si sale con la tapa, se vuelve a clavar: es el dise\xf1o.", 385, PAGE_H - 178, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p3.draw_alert_box(385, PAGE_H - 265, 175, 78, "SIN HERRAMIENTAS",
+                      ["\xb7 Entran a presion con el pico guia.",
+                       "\xb7 Quedan 3.6 mm fuera para la tapa.",
+                       "\xb7 No llevan pegamento a proposito."],
                       color_rgb=(0.85, 0.35, 0.1))
 
     p3.add(f"q 0.85 0.85 0.88 RG 1 w 36 {PAGE_H - 440:.2f} m {PAGE_W - 36:.2f} {PAGE_H - 440:.2f} l S Q\n")
@@ -433,7 +433,7 @@ def build_manual():
 
     p3.draw_alert_box(385, PAGE_H - 680, 175, 105, "[!] REGLA CRITICA DE MONTAJE",
                       ["\xb7 Colocar el collar ANTES de montar",
-                       "  o encolar la cabeza.",
+                       "  o montar la cabeza.",
                        "\xb7 Si se monta la cabeza primero,",
                        "  el collar NO podra introducirse.",
                        "\xb7 Muesca al frente para cable USB-C."],
@@ -467,7 +467,7 @@ def build_manual():
     p4.add(f"q 0.85 0.85 0.88 RG 1 w 36 {PAGE_H - 440:.2f} m {PAGE_W - 36:.2f} {PAGE_H - 440:.2f} l S Q\n")
 
     p4.draw_step_badge(4, 55, PAGE_H - 475)
-    p4.draw_text("CIERRE Y SELLADO DEL CASCO", 82, PAGE_H - 472, font='/F2', size=13, rgb=(0.05, 0.05, 0.08))
+    p4.draw_text("CIERRE DEL CASCO (BAYONETA)", 82, PAGE_H - 472, font='/F2', size=13, rgb=(0.05, 0.05, 0.08))
     p4.draw_part_badge("B", "1x", 360, PAGE_H - 472)
     p4.draw_part_badge("C", "1x", 425, PAGE_H - 472)
 
@@ -475,18 +475,18 @@ def build_manual():
     p4.draw_image('step4', 40, 50, 327, 360)
     p4.draw_dashed_arrow(202, 335, 202, 230)
 
-    p4.draw_text("1. Ensayo en seco: Comprueba que las 2 espigas de centrado", 385, PAGE_H - 505, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p4.draw_text("   de cabeza_dorso calzan sin resistencia en cabeza_frente.", 385, PAGE_H - 517, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p4.draw_text("2. Aplica un cordon fino de cianoacrilato en el rebaje perimetral.", 385, PAGE_H - 533, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p4.draw_text("3. Presiona firmemente ambas mitades durante 45-60 segundos.", 385, PAGE_H - 547, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p4.draw_text("4. Dejar reposar 5 minutos para curado completo.", 385, PAGE_H - 561, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p4.draw_text("1. Presenta el dorso: los 3 nervios encarados a sus canales.", 385, PAGE_H - 505, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p4.draw_text("   Solo cierra en UNA orientacion (orejas a plomo).", 385, PAGE_H - 517, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p4.draw_text("2. Empuja y gira un cuarto de vuelta hasta juntar las caras.", 385, PAGE_H - 533, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p4.draw_text("3. Sin pegamento: se abre girando al reves para servicio.", 385, PAGE_H - 547, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p4.draw_text("4. Comprobar que el cable asoma por la boca del cuello.", 385, PAGE_H - 561, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
 
     p4.draw_alert_box(385, PAGE_H - 680, 175, 105, "[!] ALINEACION OBLIGATORIA",
-                      ["\xb7 Las 2 espigas impiden que el casco",
-                       "  quede girado al encolar.",
+                      ["\xb7 Los 3 nervios asimetricos impiden",
+                       "  que el casco quede girado.",
                        "\xb7 Comprobar que el cable de bateria",
                        "  asoma por la boca del cuello.",
-                       "\xb7 Una vez pegado no debe reabrirse."],
+                       "\xb7 No se abre solo con el uso."],
                       color_rgb=(0.85, 0.35, 0.1))
 
     pdf.add_page(p4.get_stream())
@@ -507,13 +507,13 @@ def build_manual():
 
     p5.draw_text("1. Marco del Visor aro_visor.stl (Negro): Gota minima de", 385, PAGE_H - 110, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
     p5.draw_text("   adhesivo en el reverso y pegar enmarcando la pantalla.", 385, PAGE_H - 122, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p5.draw_text("2. Orejas oreja_izq / oreja_der.stl (Turquesa): Adhesivo en", 385, PAGE_H - 138, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p5.draw_text("   las espigas e insertar en las ranuras superiores.", 385, PAGE_H - 150, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p5.draw_text("2. Orejas oreja_izq / oreja_der.stl (Turquesa): presentar", 385, PAGE_H - 138, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p5.draw_text("   brida+cono y girar 1/4 de vuelta. Sin pegamento.", 385, PAGE_H - 150, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
     p5.draw_text("3. Boton de Sien boton.stl (Turquesa): Pegar el dial de 3", 385, PAGE_H - 166, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
     p5.draw_text("   surcos concentricos en el rebaje de la sien derecha.", 385, PAGE_H - 178, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
     p5.draw_alert_box(385, PAGE_H - 265, 175, 75, "DETALLE ESTETICO",
                       ["\xb7 El boton de sien es un dial estetico.",
-                       "\xb7 Las orejas encajan con espiga mecanica.",
+                       "\xb7 Las orejas giran 1/4 de vuelta (no intercambiables).",
                        "\xb7 El aro oculta la junta del cristal."],
                       color_rgb=(0.0, 0.45, 0.75))
 
@@ -535,8 +535,8 @@ def build_manual():
     p5.draw_text("3. Fijacion al Torso: Pega el conjunto en el asiento esferico", 385, PAGE_H - 549, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
     p5.draw_text("   del pecho de cuerpo.stl, exactamente centrado a x = 0.", 385, PAGE_H - 561, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
 
-    p5.draw_alert_box(385, PAGE_H - 680, 175, 105, "* CENTRADO V14 (x = 0)",
-                      ["\xb7 El modelo V14 adelanta el asiento",
+    p5.draw_alert_box(385, PAGE_H - 680, 175, 105, "* CENTRADO V15 (x = 0)",
+                      ["\xb7 El modelo V15 adelanta el asiento",
                        "  +1,9 mm y lo centra a x = 0.",
                        "\xb7 Asienta al ras de la curva del pecho.",
                        "\xb7 Asegurar que la silueta de la gata",
@@ -561,9 +561,9 @@ def build_manual():
     p6.draw_text("1. Fija la celda de litio con cinta doble cara en cartucho.stl.", 385, PAGE_H - 110, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
     p6.draw_text("2. Desliza el cartucho dentro de la bahia dorsal del cuerpo.", 385, PAGE_H - 124, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
     p6.draw_text("3. Conecta el cable MX1.25 a la placa a traves del cuello.", 385, PAGE_H - 138, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p6.draw_text("4. Coloca mochila.stl y atornilla los 2 tornillos M2x8 mm en", 385, PAGE_H - 152, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p6.draw_text("   los insertos de laton fijados en el Paso 1.", 385, PAGE_H - 164, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p6.draw_alert_box(385, PAGE_H - 265, 175, 88, "[M2] DOBLE TORNILLO M2",
+    p6.draw_text("4. Presenta mochila.stl sobre los 2 pernos y empuja a presion", 385, PAGE_H - 152, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p6.draw_text("   hasta que el ala apoye. Sin tornillos (aviso seguridad).", 385, PAGE_H - 164, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p6.draw_alert_box(385, PAGE_H - 265, 175, 88, "PRESION SIN TORNILLOS",
                       ["\xb7 El doble tornillo impide el pivoteo.",
                        "\xb7 Protege la bateria frente a ninos.",
                        "\xb7 No apretar en exceso: el laton",
@@ -585,18 +585,18 @@ def build_manual():
     p6.draw_dashed_arrow(285, 130, 240, 155)
 
     p6.draw_text("1. Orientacion: Punos y botas turquesas miran hacia ABAJO.", 385, PAGE_H - 505, font='/F2', size=8.5, rgb=(0.0, 0.318, 0.729))
-    p6.draw_text("2. Brazos: Aplica cianoacrilato en la espiga y cara plana de", 385, PAGE_H - 521, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p6.draw_text("   brazo_izq / brazo_der e inserta en cajera de hombro.", 385, PAGE_H - 533, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p6.draw_text("3. Piernas: Aplica cianoacrilato e inserta pierna_izq / der", 385, PAGE_H - 549, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p6.draw_text("   en las cajeras inferiores. Presiona cada miembro 20 s.", 385, PAGE_H - 561, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p6.draw_text("4. Dejar reposar tumbado boca arriba 10 minutos.", 385, PAGE_H - 575, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p6.draw_text("2. Brazos: empuja a presion brazo_izq / brazo_der en su", 385, PAGE_H - 521, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p6.draw_text("   cajera de hombro hasta que la cara plana asiente.", 385, PAGE_H - 533, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p6.draw_text("3. Piernas: igual con pierna_izq / der en las cajeras", 385, PAGE_H - 549, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p6.draw_text("   inferiores. Sin pegamento en ningun miembro.", 385, PAGE_H - 561, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p6.draw_text("4. Comprobar que ningun miembro gira loco en su cajera.", 385, PAGE_H - 575, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
 
-    p6.draw_alert_box(385, PAGE_H - 680, 175, 95, "[Adhesivo] FIJACION CON ADHESIVO",
-                      ["\xb7 Las cajeras llevan holgura +0,15 mm",
-                       "  calculada para cianoacrilato.",
-                       "\xb7 No dejar sueltas: son criticas",
-                       "  para la estabilidad de la figura.",
-                       "\xb7 Curado quimico completo: 10 min."],
+    p6.draw_alert_box(385, PAGE_H - 680, 175, 95, "PRESION 0.15 SIN PEGAMENTO",
+                      ["\xb7 Las cajeras llevan 0,15 mm radiales",
+                       "  y entran a presion a mano.",
+                       "\xb7 Si un vastago no entra, lija fina",
+                       "  al vastago, nunca al agujero.",
+                       "\xb7 El giro se impide por friccion."],
                       color_rgb=(0.85, 0.35, 0.1))
 
     pdf.add_page(p6.get_stream())
@@ -660,10 +660,10 @@ def build_manual():
 
     tol_rows = [
         ("Rosca M55 (anillo_placa)", "\xb1 0.30 mm", "Roscado a mano con alas de apriete. Repasar hilos con cepillo."),
-        ("Espigas centrado casco", "\xd8 2.4 mm", "Alineacion forzosa. Si roza, pasar lija fina al 400 por la espiga."),
-        ("Cajeras de extremidades", "+ 0.15 mm", "Calculada para cianoacrilato. No dejar sin encolar (riesgo caida)."),
-        ("Insertos de laton M2", "\xd8 3.2 mm", "Insercion termica a ~200 \xb0C. Prohibido insertar en frio a golpes."),
-        ("Tornillos mochila trasera", "M2 \xd7 8 mm", "Doble tornillo fijado a insertos. Evita giro y protege celda de litio."),
+        ("Bayoneta del casco", "3 nervios", "Presentar y girar 1/4 de vuelta. Solo cierra en una orientacion."),
+        ("Press-fit miembros y emblema", "0,15 mm", "Entran a presion. Lija fina al vastago si aprieta."),
+        ("Pernos de mochila", "0,15 mm", "Si un perno gira loco, una vuelta de cinta de carrocero."),
+        ("Tornilleria M2", "0x", "ELIMINADA en x1. La tapa abre tirando (ver aviso)."),
         ("Ranura de conectores", "16.0 \xd7 8.0 mm", "Despejada bajo barbilla. Permite carga USB-C sin abrir el casco."),
         ("Cuello y collarin", "\xd8 22.0 mm", "Encaje deslizante holgado. NO aplicar pegamento."),
     ]
@@ -677,9 +677,9 @@ def build_manual():
 
     p8.draw_alert_box(36, PAGE_H - 510, PAGE_W - 72, 165,
                       "PROTOCOLO DE SEGURIDAD PEDIATRICA (MDR 2017/745 / EVALUACION CLINICA)",
-                      ["\xb7 1. Proteccion de Bateria: La celda de litio esta confinada en el cartucho interior con doble tornillo M2.",
+                      ["\xb7 1. Proteccion de Bateria: la tapa ahora abre tirando (sin herramienta). Valorar con riesgo clinico.",
                        "     Ningun nino puede acceder a la bateria sin herramienta especifica.",
-                       "\xb7 2. Cero Piezas Sueltas: Todas las extremidades, orejas y accesorios deben fijarse con cianoacrilato",
+                       "\xb7 2. Cero Piezas Sueltas: miembros y orejas van a presion/bayoneta; aro, boton y logo con ciano",
                        "     de grado profesional para evitar riesgo de atragantamiento.",
                        "\xb7 3. Bordes Redondeados: Todos los radios del modelo (R > 2 mm) eliminan aristas vivas en el contacto.",
                        "\xb7 4. Biocompatibilidad del PLA: Emplear filamento PLA virgen certificado sin aditivos toxicos.",

@@ -1,5 +1,22 @@
 # 🤖 LÚA — Manual de Ensamble Técnico Real
-### Mascota Robótica · Valeria+ / VIA+ · V14 (Fase 3 USC) · Septiembre 2026
+### Mascota Robótica · Valeria+ / VIA+ · V15 (Fase 3 USC) · Septiembre 2026
+
+---
+
+## 🆕 Novedades de la revisión x1 (23/9/2026)
+
+Esta revisión elimina el pegamento estructural, los tornillos M2 y los insertos
+de latón. Todo encaja a presión o con un cuarto de vuelta, como piezas de Lego:
+
+![Lúa x1 ensamblada](../renders/render_x1_hero.png)
+
+| Unión | Antes (V14) | Ahora (V15) | Detalle |
+|:---|---|---|---|
+| Casco (2 mitades) | 2 espigas + cianoacrilato | Bayoneta de 3 nervios, ¼ de vuelta | ![Bayoneta](../renders/render_x1_bayoneta.png) |
+| Orejas | Espiga Ø5 pegada | Bayoneta de ¼ de vuelta (brida + cono + nervio) | ![Oreja](../renders/render_x1_oreja.png) |
+| Mochila | 2 tornillos M2 + insertos | 2 pernos sueltos press-fit | ![Mochila](../renders/render_x1_mochila.png) |
+| Cuello, brazos, piernas, emblema | Pegados (0,5 mm de juego) | Press-fit 0,15 mm, sin pegamento | — |
+| Cabeza | Φ78 | Φ87 (entra la carcasa de la placa) | — |
 
 ---
 
@@ -19,7 +36,7 @@ Todas las figuras y vistas que acompañan a esta guía son **renders 3D y captur
 
 ---
 
-## 🗂️ 1. Inventario Oficial de Piezas Impresas (20 Piezas)
+## 🗂️ 1. Inventario Oficial de Piezas Impresas (21 Piezas)
 
 ![Plato Oficial de Impresión](../renders/muneco-plato.png)
 
@@ -27,26 +44,26 @@ Todas las figuras y vistas que acompañan a esta guía son **renders 3D y captur
 
 | Letra | Pieza | Archivo STL | Color Impreso | Cant. | Función en el Ensamble |
 |:---:|---|---|:---:|:---:|---|
-| **A** | **Cuerpo** | `cuerpo.stl` | ⬜ Blanco | 1 | Tronco principal. Aloja la batería, 2 insertos dorsales y cajeras de miembros. |
-| **B** | **Cabeza frontal** | `cabeza_frente.stl` | ⬜ Blanco | 1 | Cara frontal, visor circular, 4 costillas interiores y rosca trapecial M55. |
-| **C** | **Cabeza dorso** | `cabeza_dorso.stl` | ⬜ Blanco | 1 | Cúpula con respiraderos, boca de cuello y 2 espigas de centrado forzoso. |
+| **A** | **Cuerpo** | `cuerpo.stl` | ⬜ Blanco | 1 | Tronco principal. Aloja la batería, 2 taladros para pernos y cajeras press-fit de miembros. |
+| **B** | **Cabeza frontal** | `cabeza_frente.stl` | ⬜ Blanco | 1 | Cara frontal, visor circular, 4 costillas redondas, rosca trapecial M55 y espolón de bayoneta con 3 nervios. |
+| **C** | **Cabeza dorso** | `cabeza_dorso.stl` | ⬜ Blanco | 1 | Cúpula con respiraderos, boca de cuello press-fit, manga con 3 canales helicoidales y cajeras de bayoneta para orejas. |
 | **D** | **Brazo izquierdo** | `brazo_izq.stl` | 🟦/⬜ Bicolor | 1 | Brazo impreso vertical. Puño turquesa (hasta Z=16.5 mm) y hombro blanco. |
 | **E** | **Brazo derecho** | `brazo_der.stl` | 🟦/⬜ Bicolor | 1 | Brazo impreso vertical. Puño turquesa (hasta Z=16.5 mm) y hombro blanco. |
 | **F** | **Pierna izquierda** | `pierna_izq.stl` | 🟦/⬜ Bicolor | 1 | Pierna impresa vertical. Bota turquesa (hasta Z=14.0 mm) y muslo blanco. |
 | **G** | **Pierna derecha** | `pierna_der.stl` | 🟦/⬜ Bicolor | 1 | Pierna impresa vertical. Bota turquesa (hasta Z=14.0 mm) y muslo blanco. |
-| **H** | **Oreja izquierda** | `oreja_izq.stl` | 🟦 Turquesa | 1 | Oreja con espiga de anclaje para la parte superior del casco. |
-| **I** | **Oreja derecha** | `oreja_der.stl` | 🟦 Turquesa | 1 | Oreja con espiga de anclaje para la parte superior del casco. |
+| **H** | **Oreja izquierda** | `oreja_izq.stl` | 🟦 Turquesa | 1 | Oreja con bayoneta de ¼ de vuelta (brida + cono + nervio). Sin pegamento. |
+| **I** | **Oreja derecha** | `oreja_der.stl` | 🟦 Turquesa | 1 | Oreja con bayoneta de ¼ de vuelta (brida + cono + nervio). Sin pegamento. |
 | **J** | **Collar** | `collar.stl` | 🟦 Turquesa | 1 | Anillo del cuello con muesca pasante para el túnel de carga USB-C. |
-| **K** | **Mochila** | `mochila.stl` | 🟦 Turquesa | 1 | Tapa trasera asegurada con 2 tornillos métrica M2 × 8 mm. |
+| **K** | **Mochila** | `mochila.stl` | 🟦 Turquesa | 1 | Tapa trasera con 2 cajeras ciegas para los pernos sueltos. Sin tornillos. |
 | **L** | **Botón de sien** | `boton.stl` | 🟦 Turquesa | 1 | Dial estético con 3 surcos concéntricos en la sien derecha. |
-| **M** | **Emblema** | `emblema.stl` | 🟦 Turquesa | 1 | Aro de Ø22 mm centrado en el pecho. Aloja la pastilla del logo. |
+| **M** | **Emblema** | `emblema.stl` | 🟦 Turquesa | 1 | Aro de Ø22 mm centrado en el pecho. Entra a presión; aloja la pastilla del logo. |
 | **N** | **Logo** | `logo.stl` | ⬜ Blanco | 1 | Silueta recortada de la gata Lúa en relieve blanco dentro del emblema. |
 | **O** | **Aro visor** | `aro_visor.stl` | ⬛ Negro | 1 | Marco circular que enmarca la pantalla LCD IPS redonda. |
 | **P** | **Anillo de placa** | `anillo_placa.stl` | ⬜ Blanco | 1 | Rosca trapecial Ø55 M55. Retiene la PCB firmemente sin aplastarla. |
 | **Q** | **Cartucho batería** | `cartucho.stl` | ⬜ Blanco | 1 | Cuna interior deslizante para alojar la celda con cinta doble cara. |
 | **R** | **Pulsadores** | `pulsadores.stl` | ⬛ Negro | 1 | Embellecedor bajo barbilla para puerto USB-C y botón BOOT. |
-| **S** | **Insertos roscados M2** | — | 🟡 Latón | 2 | Insertos M2 (longitud 3-4 mm) fijados por calor en la espalda. |
-| **T** | **Tornillos M2 × 8 mm** | — | 🩶 Acero | 2 | Tornillos métricos para fijar la mochila a los insertos de latón. |
+| **S** | **Pernos de mochila** | `pernos_mochila.stl` | ⬜ Blanco | 2 | Pernos sueltos Ø4 × 6,6 con pico guía: uno vive en el cuerpo, la tapa entra y sale. |
+| ~~**T** | **Tornillos M2 × 8 mm** | — | 🩶 Acero | 2 | ~~Eliminados en x1: la mochila ya no lleva tornillos ni insertos de latón.~~ |
 
 ---
 
@@ -63,10 +80,9 @@ Todas las figuras y vistas que acompañan a esta guía son **renders 3D y captur
 
 | Herramienta / Material | Función en el Ensamble |
 |---|---|
-| 🔧 **Soldador de punta fina** | Ajustado a ~200 °C para insertar los 2 casquillos roscados M2 en la espalda. |
-| 🧴 **Cianoacrilato de viscosidad media** | Para la unión del casco, orejas, botón de sien, emblema y extremidades. |
-| 🔩 **Destornillador Phillips M2** | Para apretar los 2 tornillos M2 × 8 mm de la mochila trasera. |
+| 🧴 **Cianoacrilato de viscosidad media** | SOLO para piezas pequeñas vistas: aro del visor, botón de sien y pastilla del logo. Nada estructural lleva pegamento desde x1. |
 | 📏 **Cinta de espuma de doble cara** | Para amortiguar y fijar la celda de litio dentro del cartucho. |
+| 🗞️ **Lija fina (grano 220)** | Solo si un press-fit entra demasiado apretado: una pasada suave al vástago, nunca al agujero. |
 
 ---
 
@@ -74,24 +90,23 @@ Todas las figuras y vistas que acompañan a esta guía son **renders 3D y captur
 
 ---
 
-### PASO 1 · Instalación de los Insertos Térmicos M2 en la Espalda
+### PASO 1 · Clavar los 2 pernos de la mochila en la espalda
 
-![Vista Trasera — Posición de la Mochila e Insertos](../renders/muneco-atras.png)
+![Mochila y pernos sueltos](../renders/render_x1_mochila.png)
 
-1. Enchufa el soldador de punta fina a **~200 °C**.
-2. Apoya el `cuerpo.stl` boca abajo sobre una mesa firme y plana.
-3. Coloca un inserto roscado de latón M2 sobre cada uno de los dos orificios de la espalda (cajeras de la mochila).
-4. Apoya suavemente la punta del soldador sobre el inserto. Deja que el calor residual reblandezca el PLA: **el inserto debe descender por calor, nunca forzado a golpes**.
-5. Deja que quede enrasado con la superficie. Retira el soldador y deja enfriar **2 minutos** sin moverlo.
+1. Apoya el `cuerpo.stl` boca abajo sobre una mesa firme y plana.
+2. Toma los 2 `pernos_mochila.stl` e introdúcelos a presión en los dos taladros de la espalda (a ±20,5 mm del eje), con el pico guía por delante. Entran 3,0 mm y quedan 3,6 mm fuera.
+3. Comprueba que no bailan: si un perno gira loco, una vuelta de cinta de carrocero en su mitad basta.
+4. *(Si al abrir la tapa un perno sale con ella, se vuelve a clavar en el cuerpo: no es un fallo, es el diseño).*
 
 ---
 
-### PASO 2 · Deslizar el Collar al Cuello (¡ANTES de Pegar la Cabeza!)
+### PASO 2 · Deslizar el Collar al Cuello (¡ANTES de montar la Cabeza!)
 
 ![Macro del Collar y Ranura USB-C](../renders/render_collar_usbc_macro.png)
 
 > ⛔ **REGLA CRÍTICA DE MONTAJE:**  
-> El `collar.stl` (anillo turquesa) **DEBE** deslizarse por la espiga del cuello antes de montar la cabeza. Si colocas o pegas la cabeza sin el collar, no podrás introducirlo después.
+> El `collar.stl` (anillo turquesa) **DEBE** deslizarse por la espiga del cuello antes de montar la cabeza. Si colocas la cabeza sin el collar, no podrás introducirlo después.
 
 1. Toma el `collar.stl`.
 2. Observa la **muesca pasante** que tiene en su borde frontal.
@@ -115,20 +130,21 @@ Todas las figuras y vistas que acompañan a esta guía son **renders 3D y captur
 
 ---
 
-### PASO 4 · Cierre y Sellado del Casco
+### PASO 4 · Cierre del Casco (bayoneta, sin pegamento)
 
 | Vista Lateral CAD | Vista Frontal CAD | Vista Trasera CAD |
 |:---:|:---:|:---:|
 | ![Lado](../renders/muneco-lado.png) | ![Frente](../renders/muneco-frente.png) | ![Atrás](../renders/muneco-atras.png) |
 
-> ⚠️ **ENSAYO EN SECO:**  
-> Las dos mitades de la cabeza llevan **2 espigas de centrado** en la junta de unión. Encájalas en seco primero para comprobar que entran suavemente. Si rozan, pasa una lija fina por las espigas.
+![Bayoneta del casco, explosionada](../renders/render_x1_bayoneta.png)
 
-1. Aplica una fina hilera de cianoacrilato en la pestaña de unión perimetral de `cabeza_dorso.stl`.
-2. Encaja `cabeza_dorso.stl` contra `cabeza_frente.stl` haciendo coincidir las 2 espigas en sus orificios.
-3. Presiona firmemente ambas mitades durante **45 a 60 segundos**.
-4. Deja curar **5 minutos**.  
-   *(Esta junta no se vuelve a abrir: los cables no deben sufrir fatiga).*
+> ⚠️ **ENSAYO EN SECO:**  
+> Presenta el dorso sobre el espolón de la frente y gira un cuarto de vuelta en vacío, sin forzar. Los 3 nervios asimétricos solo dejan cerrar en UNA orientación: la que deja las orejas a plomo.
+
+1. Presenta `cabeza_dorso.stl` sobre el espolón de `cabeza_frente.stl`, con los 3 nervios encarados a sus 3 canales.
+2. Empuja y gira un cuarto de vuelta hasta que las dos caras se juntan a ras.
+3. No lleva pegamento: la junta se abre girando al revés para inspeccionar la electrónica.
+4. *(Esta junta no se vuelve a abrir sola: los cables no deben sufrir fatiga).*
 
 ---
 
@@ -137,9 +153,12 @@ Todas las figuras y vistas que acompañan a esta guía son **renders 3D y captur
 ![Vista de Perfil — Orejas y Botón de Sien](../renders/muneco-lado.png)
 
 1. **Aro del Visor (`aro_visor.stl`):**  
-   Aplica una gota mínima de cianoacrilato en el reverso del marco negro y pégalo alrededor del cristal de la pantalla en la cara frontal.
-2. **Orejas (`oreja_izq.stl` y `oreja_der.stl`):**  
-   Aplica adhesivo en las espigas de las orejas turquesas e insértalas en los huecos superiores del casco. Presiona 15 s.
+   Aplica una gota mínima de cianoacrilato en el reverso del marco negro y pégalo alrededor del cristal de la pantalla en la cara frontal. *(Es una de las 3 únicas piezas que aún llevan pegamento).*
+2. **Orejas (`oreja_izq.stl` y `oreja_der.stl`):**
+
+   ![Bayoneta de la oreja, explosionada](../renders/render_x1_oreja.png)
+
+   Presenta cada oreja en su cajera (brida contra el plano, cono centrando) y gira un cuarto de vuelta hasta que asienta. Sin pegamento. La izquierda y la derecha no son intercambiables: cada nervio solo entra en su canal.
 3. **Botón de Sien (`boton.stl`):**  
    Pega el disco turquesa con los 3 surcos concéntricos en el rebaje de la sien derecha. *(Es un dial estético de traje espacial).*
 
@@ -155,19 +174,19 @@ Todas las figuras y vistas que acompañan a esta guía son **renders 3D y captur
    Aplica una microgota de cianoacrilato en el hueco interior de `emblema.stl` (aro turquesa de Ø22 mm).
 2. Encaja la pastilla `logo.stl` (silueta blanca en relieve de Lúa) dentro del aro. Espera 2 minutos.
 3. **Fijación al Torso:**  
-   Aplica cianoacrilato en la cara trasera del emblema y pégalo **perfectamente centrado en el pecho** del `cuerpo.stl`. El modelo V14 tiene el asiento adelantado +1,9 mm para que asiente al ras.
+   Presenta el emblema en su cajera del pecho y empuja a presión hasta que asiente. Sin pegamento. El modelo V14 tiene el asiento adelantado +1,9 mm para que asiente al ras.
 
 ---
 
-### PASO 7 · Batería de Litio y Fijación de la Mochila
+### PASO 7 · Batería de Litio y Mochila a presión
 
-![Espalda con Mochila y 2 Tornillos M2](../renders/muneco-atras.png)
+![Mochila y pernos](../renders/render_x1_mochila.png)
 
 1. Coloca una tira de cinta de espuma doble cara en la cuna de `cartucho.stl` y pega la celda de litio firmemente.
 2. Desliza el cartucho con la batería en la bahía interna del cuerpo.
 3. Conecta el cable con conector MX1.25 a la placa dentro de la cabeza.
-4. Coloca la `mochila.stl` sobre la espalda y atornilla los **2 tornillos M2 × 8 mm** en los insertos de latón instalados en el Paso 1.
-   *(El doble tornillo garantiza que la tapa no pivote y protege la celda de manipulación infantil).*
+4. Presenta la `mochila.stl` sobre los 2 pernos del Paso 1 y empuja hasta que el ala apoye en el plano. Sin tornillos.
+   *(⚠️ Aviso honesto de seguridad: con tornillos la tapa exigía herramienta; a presión se abre tirando. Si la evaluación de riesgo lo pide, se vuelve a los M2: los taladros están documentados en el historial).*
 
 ---
 
@@ -178,9 +197,9 @@ Todas las figuras y vistas que acompañan a esta guía son **renders 3D y captur
 1. Comprueba la orientación de las piezas:
    - **Puños y Botas (Turquesa):** Miran siempre hacia abajo.
    - **Hombros y Muslos (Blanco):** Encajan en las cajeras del tronco.
-2. Aplica cianoacrilato en la espiga y cara plana de `brazo_izq.stl` e insértalo en la cajera del hombro izquierdo. Presiona 20 s.
-3. Repite el proceso con `brazo_der.stl`, `pierna_izq.stl` y `pierna_der.stl`.
-4. Deja reposar el muñeco acostado boca arriba durante **10 minutos** para curado químico completo.
+2. Presenta `brazo_izq.stl` en la cajera del hombro izquierdo y empuja a presión hasta que la cara plana asiente. Sin pegamento: si entra demasiado apretado, una pasada de lija fina al vástago.
+3. Repite con `brazo_der.stl`, `pierna_izq.stl` y `pierna_der.stl`.
+4. Comprueba que ninguna pieza gire loca en su cajera.
 
 ---
 
@@ -202,7 +221,7 @@ Todas las figuras y vistas que acompañan a esta guía son **renders 3D y captur
 ![Muñeco Ensamblado — Frente](../renders/render_estilizado_frente.png)
 
 - El casco **NO se pega al cuerpo**.
-- La boca cilíndrica del cuello encaja por gravedad y fricción sobre la espiga superior del tronco.
+- La boca de la cabeza entra a presión sobre la espiga del cuello (0,15 mm): se monta empujando y se desmonta tirando hacia arriba en cualquier momento para inspeccionar la electrónica sin romper la figura.
 - Esto permite:
   - Girar la cabeza para orientar la mirada.
   - Desmontar la cabeza tirando hacia arriba en cualquier momento para inspeccionar la electrónica sin romper la figura.
@@ -214,10 +233,11 @@ Todas las figuras y vistas que acompañan a esta guía son **renders 3D y captur
 | Zona Mecánica | Tolerancia CAD | Recomendación de Taller |
 |---|:---:|---|
 | **Rosca M55 (anillo_placa)** | ±0,30 mm | Roscar a mano. Si ofrece resistencia, repasar la costura con un cepillo. |
-| **Espigas de centrado casco** | Ø2,4 mm | No forzar. Si la junta no cierra a ras, rebajar ligeramente la espiga con lija. |
-| **Cajeras de extremidades** | +0,15 mm | Diseñadas para adherencia con cianoacrilato. No dejar sin pegar. |
-| **Insertos de latón M2** | Ø3,2 mm | No introducir mecánicamente en frío; utilizar siempre el calor del soldador. |
+| **Press-fit cuello, miembros, emblema** | 0,15 mm radial | Entran a presión. Si un vástago no entra, lija fina al vástago, nunca al agujero. |
+| **Bayoneta del casco (3 nervios)** | 0,3–0,4 mm en canal | Presentar los 3 nervios en sus bocas y girar ¼ de vuelta. Solo cierra en una orientación. |
+| **Bayoneta de orejas** | 0,15 mm en canal | Presentar brida + cono y girar ¼ de vuelta. Izquierda y derecha no intercambiables. |
+| **Pernos de mochila** | 0,15 mm radial | Si un perno gira loco, una vuelta de cinta de carrocero en su mitad. |
 
 ---
 
-*Manual técnico oficial · Proyecto Lúa V14 · Valeria+ / VIA+ · Tesis Doctoral USC 2023–2027*
+*Manual técnico oficial · Proyecto Lúa V15 · Valeria+ / VIA+ · Tesis Doctoral USC 2023–2027*
