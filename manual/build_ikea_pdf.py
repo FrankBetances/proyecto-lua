@@ -551,7 +551,6 @@ def build_manual():
     p6.draw_text("BATERIA DE LITIO Y FIJACION DE MOCHILA", 82, PAGE_H - 72, font='/F2', size=13, rgb=(0.05, 0.05, 0.08))
     p6.draw_part_badge("Q", "1x", 370, PAGE_H - 72)
     p6.draw_part_badge("K", "1x", 420, PAGE_H - 72)
-    p6.draw_part_badge("T", "2x", 475, PAGE_H - 72)
 
     p6.draw_rect(36, PAGE_H - 425, 335, 330, fill_rgb=(0.99, 0.99, 1.0), stroke_rgb=(0.88, 0.88, 0.9), stroke_w=1)
     p6.draw_image('step7', 40, PAGE_H - 420, 327, 320)
@@ -563,11 +562,11 @@ def build_manual():
     p6.draw_text("3. Conecta el cable MX1.25 a la placa a traves del cuello.", 385, PAGE_H - 138, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
     p6.draw_text("4. Presenta mochila.stl sobre los 2 pernos y empuja a presion", 385, PAGE_H - 152, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
     p6.draw_text("   hasta que el ala apoye. Sin tornillos (aviso seguridad).", 385, PAGE_H - 164, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p6.draw_alert_box(385, PAGE_H - 265, 175, 88, "PRESION SIN TORNILLOS",
-                      ["\xb7 El doble tornillo impide el pivoteo.",
-                       "\xb7 Protege la bateria frente a ninos.",
-                       "\xb7 No apretar en exceso: el laton",
-                       "  ofrece retencion mecanica firme."],
+    p6.draw_alert_box(385, PAGE_H - 265, 175, 88, "CIERRE PRESS-FIT SIN TORNILLOS",
+                      ["\xb7 Los 2 pernos impiden el pivoteo.",
+                       "\xb7 La tapa encaja a presion a mano.",
+                       "\xb7 Abre tirando hacia afuera.",
+                       "\xb7 Retencion firme sin herramientas."],
                       color_rgb=(0.0, 0.45, 0.75))
 
     p6.add(f"q 0.85 0.85 0.88 RG 1 w 36 {PAGE_H - 440:.2f} m {PAGE_W - 36:.2f} {PAGE_H - 440:.2f} l S Q\n")

@@ -1,0 +1,16 @@
+# OS and editor files
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Blender and temporary CAD assets
+*.blend1
+*.blend2
+manual/diagrams/
+manual/pdf_preview/
