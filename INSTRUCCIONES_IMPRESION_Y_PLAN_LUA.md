@@ -20,42 +20,44 @@ El modelo actual representa la **maqueta oficial de la Fase 3 del plan de la USC
    - Embellecedor oscuro que protege e interactúa con los pulsadores físicos del canto de la placa de desarrollo (`REST` y `BOOT`) a través de la ranura de carga. *Nota: se imprime una vez contrastadas las cotas con calibre*.
 4. **Sujeción de PCB por Rosca Positiva (`anillo_placa.stl`)**:
    - Rosca trapecial Ø55 mm M55 integrada en `cabeza_frente.stl`. Sujeta firmemente la pantalla y placa absorbiendo espesores entre 8,0 mm y 16,0 mm sin requerir espuma adhesiva.
-5. **Alineación del Casco por bayoneta (`cabeza_dorso.stl`)** (x1):
-   - 3 nervios helicoidales asimétricos sustituyen a las 2 espigas: se presenta, se gira un cuarto de vuelta y solo cierra en una orientación. Sin pegamento.
-6. **Túnel de Carga USB-C Despejado**:
+5. **Alineación del Casco por Aro a Presión («de LEGO»)** (V15):
+   - Aro recto a presión con 3 llaves asimétricas: se presenta, se empuja recto a presión y entra en una sola posición. Sin pegamento, se retira tirando para servicio.
+6. **Orejas con Espiga en D Ø8 Anti-Rotación**:
+   - Espiga en D impresa tumbada para máxima resistencia mecánica en Z. No gira ni requiere adhesivo.
+7. **Túnel de Carga USB-C Despejado**:
    - Ranura de 16 mm bajo la barbilla y muesca pasante en `collar.stl` para conectar el cable de carga USB-C sin desmontar la figura.
-7. **Probetas de Verificación Rápida (`testigo_placa.stl` y `testigo_rosca.stl`)**:
-   - Dos piezas breves (~35 min de impresión combinada) que resuelven las tolerancias de PCB y rosca antes de lanzar las piezas de 4 horas.
+8. **Probetas de Verificación Rápida (`testigo_placa.stl` y `testigo_rosca.stl`)**:
+   - Dos piezas breves (~35 min de impresión combinada) que resuelven las tolerancias de carcasa Ø50 y rosca antes de lanzar las piezas mayores.
 
 ---
 
 ## 2. Catálogo Oficial de los 21 Archivos STL
 
-Todos los archivos han sido verificados matemáticamente mediante el gate [`tools/check-cad.js`](./lua-firmware/tools/check-cad.js): **sin agujeros, una sola cáscara (salvo virutas internas de teselación avisadas), apoyo en Z = 0 y dentro de la cama 220 × 220 mm con 5 mm de margen**.
+Todos los archivos han sido verificados matemáticamente mediante el gate [`tools/check-cad.js`](./lua-firmware/tools/check-cad.js): **sin agujeros, una sola cáscara, apoyo en Z = 0 y dentro de la cama 220 × 220 mm con 5 mm de margen**.
 
 | Archivo STL | Cant. | Color sugerido | Huella X × Y × Z (mm) | Vol. Macizo | Función y Rol en el Ensamble |
 | :--- | :---: | :--- | :---: | :---: | :--- |
-| **`testigo_placa.stl`** | 1 | Cualquier color | 49.5 × 51.0 × 8.0 | 3.0 cm³ | **Probeta 1 (Calibración):** Valida contorno de PCB y ranura USB-C. |
-| **`testigo_rosca.stl`** | 1 | Cualquier color | 61.0 × 61.0 × 12.0 | 5.3 cm³ | **Probeta 2 (Calibración):** Barril roscado M55 (*imprimir con balsa*). |
-| **`anillo_placa.stl`** | 1 | Blanco / Libre | 64.3 × 64.3 × 11.0 | 8.3 cm³ | **Retención de PCB:** Se enrosca tras la placa dentro de la cabeza. |
-| **`cuerpo.stl`** | 1 | Blanco | 75.4 × 65.5 × 80.0 | 164.3 cm³ | Tronco principal. Compartimento para batería y encajes de miembros. |
-| **`cabeza_frente.stl`** | 1 | Blanco | 84.4 × 84.5 × 25.9 | 27.6 cm³ | Cara frontal, visor circular y rosca M55. Con espolón de bayoneta. |
-| **`cabeza_dorso.stl`** | 1 | Blanco | 87.0 × 85.5 × 53.8 | 34.9 cm³ | Cúpula con respiraderos y manga de bayoneta (*brim 5 mm*). |
-| **`brazo_izq.stl`** | 1 | Blanco + Turquesa | 20.0 × 19.0 × 39.4 | 7.1 cm³ | Brazo izquierdo vertical. Puño turquesa hasta Z=16.5 mm. |
-| **`brazo_der.stl`** | 1 | Blanco + Turquesa | 20.0 × 19.0 × 39.4 | 7.1 cm³ | Brazo derecho vertical. Puño turquesa hasta Z=16.5 mm. |
-| **`pierna_izq.stl`** | 1 | Blanco + Turquesa | 28.3 × 23.7 × 34.5 | 11.4 cm³ | Pierna izquierda vertical. Bota turquesa hasta Z=14.0 mm. |
-| **`pierna_der.stl`** | 1 | Blanco + Turquesa | 28.3 × 23.7 × 34.5 | 11.4 cm³ | Pierna derecha vertical. Bota turquesa hasta Z=14.0 mm. |
-| **`oreja_izq.stl`** | 1 | Turquesa | 30.0 × 27.3 × 12.0 | 2.7 cm³ | Oreja izquierda con bayoneta de 1/4 de vuelta (con balsa). |
-| **`oreja_der.stl`** | 1 | Turquesa | 30.0 × 27.3 × 12.0 | 2.7 cm³ | Oreja derecha con bayoneta de 1/4 de vuelta (con balsa). |
-| **`collar.stl`** | 1 | Turquesa | 34.4 × 36.6 × 8.4 | 3.0 cm³ | Anillo del cuello con muesca para USB-C hacia el frente. |
-| **`mochila.stl`** | 1 | Turquesa | 48.0 × 36.0 × 10.4 | 14.6 cm³ | Tapa trasera sobre 2 pernos sueltos (sin tornillos). |
-| **`pernos_mochila.stl`** | 1 | Blanco / Libre | 20.6 × 4.0 × 4.0 | 0.2 cm³ | **[NUEVO x1]** Los 2 pernos sueltos Ø4 (salen de una pieza con lengüeta rompible). |
-| **`boton.stl`** | 1 | Turquesa | 15.0 × 15.0 × 3.4 | 0.5 cm³ | Detalle estético pegado en la sien derecha. |
-| **`emblema.stl`** | 1 | Turquesa | 22.0 × 22.0 × 2.4 | 0.6 cm³ | Aro exterior del escudo centrado en el pecho. Aloja `logo.stl`. |
-| **`logo.stl`** | 1 | Blanco | 14.9 × 14.9 × 1.6 | 0.3 cm³ | **[NUEVO]** Silueta de Lúa pegada dentro del emblema. |
+| **`testigo_placa.stl`** | 1 | Cualquier color | 63.2 × 59.7 × 2.4 | 2.2 cm³ | **Probeta 1 (Calibración):** Valida contorno de carcasa Ø50 y ranura USB-C. |
+| **`testigo_rosca.stl`** | 1 | Cualquier color | 58.8 × 58.8 × 12.0 | 5.1 cm³ | **Probeta 2 (Calibración):** Barril roscado M55 (*imprimir con balsa*). |
+| **`anillo_placa.stl`** | 1 | Blanco / Libre | 55.0 × 55.0 × 9.0 | 1.7 cm³ | **Retención de PCB:** Asiento cónico 45° (recoge 5 a 18 mm). Con soportes de árbol. |
+| **`cuerpo.stl`** | 1 | Blanco | 75.4 × 65.5 × 80.0 | 162.3 cm³ | Tronco principal. Compartimento para batería y encajes de miembros. |
+| **`cabeza_frente.stl`** | 1 | Blanco | 75.7 × 75.3 × 24.9 | 24.3 cm³ | Cara frontal, visor circular, labio Ø50 y rosca M55. Espolón con 3 llaves Lego. |
+| **`cabeza_dorso.stl`** | 1 | Blanco | 78.0 × 76.3 × 48.1 | 30.7 cm³ | Cúpula con respiraderos, manga 3 canales y banda de refuerzo (*brim 5 mm*). |
+| **`brazo_izq.stl`** | 1 | Blanco + Turquesa | 20.0 × 18.2 × 42.1 | 6.0 cm³ | Brazo izq. vertical con espiga Ø8 mm Lego. Recorte anti-colisión barriga. |
+| **`brazo_der.stl`** | 1 | Blanco + Turquesa | 20.0 × 18.2 × 42.1 | 6.0 cm³ | Brazo der. vertical con espiga Ø8 mm Lego. Recorte anti-colisión barriga. |
+| **`pierna_izq.stl`** | 1 | Blanco + Turquesa | 28.3 × 23.7 × 40.9 | 11.9 cm³ | Pierna izq. vertical con espiga Ø9 mm Lego y nervios de aplastamiento. |
+| **`pierna_der.stl`** | 1 | Blanco + Turquesa | 28.3 × 23.7 × 40.9 | 11.9 cm³ | Pierna der. vertical con espiga Ø9 mm Lego y nervios de aplastamiento. |
+| **`oreja_izq.stl`** | 1 | Turquesa | 30.0 × 26.7 × 8.2 | 2.6 cm³ | Oreja izquierda con espiga en D Ø8 anti-rotación (sin pegamento). |
+| **`oreja_der.stl`** | 1 | Turquesa | 30.0 × 26.7 × 8.2 | 2.6 cm³ | Oreja derecha con espiga en D Ø8 anti-rotación (sin pegamento). |
+| **`collar.stl`** | 1 | Turquesa | 34.4 × 36.6 × 8.5 | 4.0 cm³ | Anillo del cuello con muesca para USB-C hacia el frente. |
+| **`mochila.stl`** | 1 | Turquesa | 48.0 × 36.0 × 10.4 | 14.6 cm³ | Tapa trasera sobre 2 pernos sueltos (sin tornillos; abre tirando). |
+| **`pernos_mochila.stl`** | 1 | Blanco / Libre | 20.6 × 4.0 × 4.0 | 0.2 cm³ | Los 2 pernos sueltos Ø4 (salen de una pieza con lengüeta rompible). |
+| **`boton.stl`** | 1 | Turquesa | 15.0 × 15.0 × 3.4 | 0.5 cm³ | Detalle estético dial pegado en la sien derecha. |
+| **`emblema.stl`** | 1 | Turquesa | 22.6 × 22.0 × 5.2 | 1.7 cm³ | Escudo centrado en el pecho con tetón stud tipo Lego. Aloja `logo.stl`. |
+| **`logo.stl`** | 1 | Blanco | 14.9 × 14.9 × 1.6 | 0.3 cm³ | Silueta de Lúa encajada y pegada dentro del emblema. |
 | **`cartucho.stl`** | 1 | Blanco / Libre | 33.2 × 9.2 × 23.2 | 2.5 cm³ | Cuna interior para sujetar la celda de litio con cinta doble cara. |
 | **`aro_visor.stl`** | 1 | Oscuro / Negro | 44.0 × 44.0 × 1.6 | 0.9 cm³ | Marco circular del visor que enmarca la pantalla IPS. |
-| **`pulsadores.stl`** | 1 | Oscuro / Negro | 28.3 × 14.3 × 18.6 | 0.9 cm³ | Guía de botones bajo barbilla (con soportes de árbol). |
+| **`pulsadores.stl`** | 1 | Oscuro / Negro | 28.3 × 10.8 × 9.8 | 0.6 cm³ | Guía de botones bajo barbilla (con soportes de árbol). |
 
 ---
 

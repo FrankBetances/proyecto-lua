@@ -345,27 +345,27 @@ def build_manual():
 
     parts_col1 = [
         ("A", "cuerpo.stl", "Tronco principal (alojamiento bater\xeda)", "1x", "Blanco"),
-        ("B", "cabeza_frente.stl", "Cara frontal y rosca M55", "1x", "Blanco"),
-        ("C", "cabeza_dorso.stl", "C\xfapula con manga de bayoneta", "1x", "Blanco"),
-        ("D", "brazo_izq.stl", "Brazo izquierdo (pu\xf1o turquesa)", "1x", "Bicolor"),
-        ("E", "brazo_der.stl", "Brazo derecho (pu\xf1o turquesa)", "1x", "Bicolor"),
-        ("F", "pierna_izq.stl", "Pierna izquierda (bota turquesa)", "1x", "Bicolor"),
-        ("G", "pierna_der.stl", "Pierna derecha (bota turquesa)", "1x", "Bicolor"),
-        ("H", "oreja_izq.stl", "Oreja izq. con bayoneta 1/4 vuelta", "1x", "Turquesa"),
-        ("I", "oreja_der.stl", "Oreja der. con bayoneta 1/4 vuelta", "1x", "Turquesa"),
+        ("B", "cabeza_frente.stl", "Cara frontal, labio \xd850 y rosca M55", "1x", "Blanco"),
+        ("C", "cabeza_dorso.stl", "C\xfapula con manga de 3 llaves Lego", "1x", "Blanco"),
+        ("D", "brazo_izq.stl", "Brazo izq. espiga \xd88 Lego (recorte cuerpo)", "1x", "Bicolor"),
+        ("E", "brazo_der.stl", "Brazo der. espiga \xd88 Lego (recorte cuerpo)", "1x", "Bicolor"),
+        ("F", "pierna_izq.stl", "Pierna izq. espiga \xd89 Lego", "1x", "Bicolor"),
+        ("G", "pierna_der.stl", "Pierna der. espiga \xd89 Lego", "1x", "Bicolor"),
+        ("H", "oreja_izq.stl", "Oreja izq. espiga en D \xd88 anti-giro", "1x", "Turquesa"),
+        ("I", "oreja_der.stl", "Oreja der. espiga en D \xd88 anti-giro", "1x", "Turquesa"),
         ("J", "collar.stl", "Anillo de cuello con muesca USB-C", "1x", "Turquesa"),
     ]
     parts_col2 = [
         ("K", "mochila.stl", "Tapa trasera con 2 cajeras pernos", "1x", "Turquesa"),
         ("L", "boton.stl", "Dial est\xe9tico sien derecha", "1x", "Turquesa"),
-        ("M", "emblema.stl", "Aro de escudo en el pecho (\xd822 mm)", "1x", "Turquesa"),
+        ("M", "emblema.stl", "Escudo pecho tet\xf3n Lego stud \xd822", "1x", "Turquesa"),
         ("N", "logo.stl", "Silueta relieve L\xfaa (blanco)", "1x", "Blanco"),
         ("O", "aro_visor.stl", "Marco frontal protector de pantalla", "1x", "Negro"),
-        ("P", "anillo_placa.stl", "Tuerca M55 de retenci\xf3n PCB", "1x", "Blanco"),
+        ("P", "anillo_placa.stl", "Anillo M55 asiento c\xf3nico 45\xb0", "1x", "Blanco"),
         ("Q", "cartucho.stl", "Cuna deslizante celda litio", "1x", "Blanco"),
         ("R", "pulsadores.stl", "Embellecedor botones bajo barbilla", "1x", "Negro"),
-        ("S", "pernos_mochila.stl", "Pernos sueltos press-fit", "2x", "Blanco"),
-        ("T", "Torniller\xeda M2", "ELIMINADA en x1: sin tornillos", "0x", "--"),
+        ("S", "pernos_mochila.stl", "Pernos sueltos press-fit \xd84", "2x", "Blanco"),
+        ("T", "Torniller\xeda M2", "ELIMINADA: 100% encajes a presi\xf3n", "0x", "--"),
     ]
 
     def draw_parts_table(col_parts, x_start, y_start):
@@ -452,13 +452,13 @@ def build_manual():
     p4.draw_image('step3', 40, PAGE_H - 420, 327, 320)
     p4.draw_dashed_arrow(202, PAGE_H - 185, 202, PAGE_H - 235)
 
-    p4.draw_text("1. Introduce la placa ESP32-S3 por detras de cabeza_frente.", 385, PAGE_H - 110, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p4.draw_text("2. Apoya la pantalla IPS entre las 4 costillas interiores.", 385, PAGE_H - 124, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p4.draw_text("3. Conectores USB-C orientados hacia la barbilla (abajo).", 385, PAGE_H - 138, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p4.draw_text("4. Enrosca el anillo_placa.stl en el barril M55 en sentido", 385, PAGE_H - 152, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p4.draw_text("   horario unicamente a mano con dos dedos.", 385, PAGE_H - 164, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p4.draw_text("1. Introduce la carcasa redonda (\xd850x13 mm) por detras de cabeza_frente.", 385, PAGE_H - 110, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p4.draw_text("2. Apoya el frontal de la pantalla en el labio circular interior.", 385, PAGE_H - 124, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p4.draw_text("3. Conector USB-C orientado hacia la ranura bajo la barbilla.", 385, PAGE_H - 138, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p4.draw_text("4. Enrosca el anillo_placa.stl (asiento c\xf3nico 45\xb0) en sentido", 385, PAGE_H - 152, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p4.draw_text("   horario unicamente a mano con dos dedos (recoge 5 a 18 mm).", 385, PAGE_H - 164, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
     p4.draw_alert_box(385, PAGE_H - 265, 175, 88, "-> APRIETE MANUAL SUAVE",
-                      ["\xb7 Absorbe holguras entre 8 y 16 mm.",
+                      ["\xb7 Asiento conico centra y fija 5 a 18 mm.",
                        "\xb7 NO usar herramientas ni alicates.",
                        "\xb7 Deja el centro libre para cable bateria.",
                        "\xb7 Si roza, repasar hilos con cepillo."],
@@ -467,7 +467,7 @@ def build_manual():
     p4.add(f"q 0.85 0.85 0.88 RG 1 w 36 {PAGE_H - 440:.2f} m {PAGE_W - 36:.2f} {PAGE_H - 440:.2f} l S Q\n")
 
     p4.draw_step_badge(4, 55, PAGE_H - 475)
-    p4.draw_text("CIERRE DEL CASCO (BAYONETA)", 82, PAGE_H - 472, font='/F2', size=13, rgb=(0.05, 0.05, 0.08))
+    p4.draw_text("CIERRE DEL CASCO (ARO A PRESION LEGO)", 82, PAGE_H - 472, font='/F2', size=13, rgb=(0.05, 0.05, 0.08))
     p4.draw_part_badge("B", "1x", 360, PAGE_H - 472)
     p4.draw_part_badge("C", "1x", 425, PAGE_H - 472)
 
@@ -475,18 +475,18 @@ def build_manual():
     p4.draw_image('step4', 40, 50, 327, 360)
     p4.draw_dashed_arrow(202, 335, 202, 230)
 
-    p4.draw_text("1. Presenta el dorso: los 3 nervios encarados a sus canales.", 385, PAGE_H - 505, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p4.draw_text("   Solo cierra en UNA orientacion (orejas a plomo).", 385, PAGE_H - 517, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p4.draw_text("2. Empuja y gira un cuarto de vuelta hasta juntar las caras.", 385, PAGE_H - 533, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p4.draw_text("3. Sin pegamento: se abre girando al reves para servicio.", 385, PAGE_H - 547, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p4.draw_text("4. Comprobar que el cable asoma por la boca del cuello.", 385, PAGE_H - 561, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p4.draw_text("1. Presenta el dorso: las 3 llaves rectas encaradas a sus canales.", 385, PAGE_H - 505, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p4.draw_text("   Solo cierra en UNA orientacion (llaves asimetricas, orejas a plomo).", 385, PAGE_H - 517, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p4.draw_text("2. Empuja recto a presion hasta juntar ambas caras a ras.", 385, PAGE_H - 533, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p4.draw_text("3. Cero pegamento: se abre tirando recto para inspeccion/servicio.", 385, PAGE_H - 547, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p4.draw_text("4. Comprobar que el cable de bateria asoma por el cuello.", 385, PAGE_H - 561, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
 
     p4.draw_alert_box(385, PAGE_H - 680, 175, 105, "[!] ALINEACION OBLIGATORIA",
-                      ["\xb7 Los 3 nervios asimetricos impiden",
-                       "  que el casco quede girado.",
+                      ["\xb7 Las 3 llaves asimetricas guian el cierre.",
+                       "\xb7 Nervios de aplastamiento fijan sin holgura.",
                        "\xb7 Comprobar que el cable de bateria",
                        "  asoma por la boca del cuello.",
-                       "\xb7 No se abre solo con el uso."],
+                       "\xb7 Abre tirando sin romper nada."],
                       color_rgb=(0.85, 0.35, 0.1))
 
     pdf.add_page(p4.get_stream())
@@ -507,13 +507,13 @@ def build_manual():
 
     p5.draw_text("1. Marco del Visor aro_visor.stl (Negro): Gota minima de", 385, PAGE_H - 110, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
     p5.draw_text("   adhesivo en el reverso y pegar enmarcando la pantalla.", 385, PAGE_H - 122, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p5.draw_text("2. Orejas oreja_izq / oreja_der.stl (Turquesa): presentar", 385, PAGE_H - 138, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p5.draw_text("   brida+cono y girar 1/4 de vuelta. Sin pegamento.", 385, PAGE_H - 150, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p5.draw_text("2. Orejas oreja_izq / oreja_der.stl (Turquesa): empujar la", 385, PAGE_H - 138, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p5.draw_text("   espiga en D \xd88 a presion en su cajera. Cero pegamento.", 385, PAGE_H - 150, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
     p5.draw_text("3. Boton de Sien boton.stl (Turquesa): Pegar el dial de 3", 385, PAGE_H - 166, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
     p5.draw_text("   surcos concentricos en el rebaje de la sien derecha.", 385, PAGE_H - 178, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
     p5.draw_alert_box(385, PAGE_H - 265, 175, 75, "DETALLE ESTETICO",
                       ["\xb7 El boton de sien es un dial estetico.",
-                       "\xb7 Las orejas giran 1/4 de vuelta (no intercambiables).",
+                       "\xb7 Orejas con espiga en D (anti-rotacion).",
                        "\xb7 El aro oculta la junta del cristal."],
                       color_rgb=(0.0, 0.45, 0.75))
 
@@ -584,16 +584,16 @@ def build_manual():
     p6.draw_dashed_arrow(285, 130, 240, 155)
 
     p6.draw_text("1. Orientacion: Punos y botas turquesas miran hacia ABAJO.", 385, PAGE_H - 505, font='/F2', size=8.5, rgb=(0.0, 0.318, 0.729))
-    p6.draw_text("2. Espigas Tipo Lego: Brazos (espiga D6 mm) y piernas", 385, PAGE_H - 521, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
-    p6.draw_text("   (espiga D7 mm) llevan vastagos machos con bisel guia.", 385, PAGE_H - 533, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p6.draw_text("2. Espigas Tipo Lego: Brazos (espiga D8) y piernas (espiga D9)", 385, PAGE_H - 521, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
+    p6.draw_text("   llevan nervios de aplastamiento. Brazo recortado a la barriga.", 385, PAGE_H - 533, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
     p6.draw_text("3. Empuja a presion cada miembro en su cajeta hembra", 385, PAGE_H - 549, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
     p6.draw_text("   del torso hasta que la cara plana asiente a ras.", 385, PAGE_H - 561, font='/F1', size=8.5, rgb=(0.2, 0.2, 0.2))
     p6.draw_text("4. Fijacion por friccion mecanica: CERO pegamento.", 385, PAGE_H - 575, font='/F2', size=8.5, rgb=(0.8, 0.1, 0.1))
 
     p6.draw_alert_box(385, PAGE_H - 680, 175, 95, "PRESS-FIT LEGO SIN PEGAMENTO",
-                      ["\xb7 Espigas machos D6 (brazo) y D7 (pierna).",
-                       "\xb7 Cajetas hembras con holgura 0,15 radial.",
-                       "\xb7 Entrada suave gracias al bisel frontal.",
+                      ["\xb7 Espigas machos D8 (brazo) y D9 (pierna).",
+                       "\xb7 Nervios aplastan 0,15 mm en cajeta.",
+                       "\xb7 Brazo abraza barriga sin colisiones.",
                        "\xb7 Asiento plano firme e inmovil."],
                       color_rgb=(0.85, 0.35, 0.1))
 
@@ -657,12 +657,13 @@ def build_manual():
     p8.draw_text("REGLA Y RECOMENDACION DE TALLER", 280, PAGE_H - 105, font='/F2', size=8.5, rgb=(1, 1, 1))
 
     tol_rows = [
-        ("Rosca M55 (anillo_placa)", "\xb1 0.30 mm", "Roscado a mano con alas de apriete. Repasar hilos con cepillo."),
-        ("Bayoneta del casco", "3 nervios", "Presentar y girar 1/4 de vuelta. Solo cierra en una orientacion."),
-        ("Press-fit miembros y emblema", "0,15 mm", "Entran a presion. Lija fina al vastago si aprieta."),
+        ("Rosca M55 (anillo_placa)", "\xb1 0.30 mm", "Asiento conico 45 deg roscado a mano (recoge 5 a 18 mm)."),
+        ("Aro de casco (cabeza)", "3 llaves LEGO", "Entra a presion recta en orientacion unica. Abre tirando."),
+        ("Orejas (espiga en D)", "\xd8 8.0 mm", "Espiga anti-rotacion a presion en cajera reforzada."),
+        ("Press-fit miembros y emblema", "0,15 mm", "Espigas D8/D9 y teton stud con nervios de aplastamiento."),
         ("Pernos de mochila", "0,15 mm", "Si un perno gira loco, una vuelta de cinta de carrocero."),
-        ("Tornilleria M2", "0x", "ELIMINADA en x1. La tapa abre tirando (ver aviso)."),
-        ("Ranura de conectores", "16.0 \xd7 8.0 mm", "Despejada bajo barbilla. Permite carga USB-C sin abrir el casco."),
+        ("Tornilleria M2", "0x", "ELIMINADA: 100% encajes a presion (ver aviso seguridad)."),
+        ("Ranura de conectores", "16.0 \xd7 8.0 mm", "Despejada bajo barbilla. Carga USB-C sin abrir el casco."),
         ("Cuello y collarin", "\xd8 22.0 mm", "Encaje deslizante holgado. NO aplicar pegamento."),
     ]
     cur_y = PAGE_H - 145

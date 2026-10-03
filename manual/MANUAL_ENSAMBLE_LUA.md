@@ -12,11 +12,11 @@ de latón. Todo encaja a presión o con un cuarto de vuelta, como piezas de Lego
 
 | Unión | Antes (V14) | Ahora (V15) | Detalle |
 |:---|---|---|---|
-| Casco (2 mitades) | 2 espigas + cianoacrilato | Bayoneta de 3 nervios, ¼ de vuelta | ![Bayoneta](../renders/render_x1_bayoneta.png) |
-| Orejas | Espiga Ø5 pegada | Bayoneta de ¼ de vuelta (brida + cono + nervio) | ![Oreja](../renders/render_x1_oreja.png) |
-| Mochila | 2 tornillos M2 + insertos | 2 pernos sueltos press-fit | ![Mochila](../renders/render_x1_mochila.png) |
-| Cuello, brazos, piernas, emblema | Pegados (0,5 mm de juego) | Press-fit 0,15 mm, sin pegamento | — |
-| Cabeza | Φ78 | Φ87 (entra la carcasa de la placa) | — |
+| Casco (2 mitades) | 2 espigas + cianoacrilato | Aro a presión con 3 llaves asimétricas («de Lego») | Cierre recto en una sola posición; abre tirando |
+| Orejas | Espiga Ø5 pegada | Espiga en D Ø8 anti-rotación (sin pegamento) | Impresa tumbada para máxima resistencia Z |
+| Mochila | 2 tornillos M2 + insertos | 2 pernos sueltos press-fit Ø4 × 6,6 | Tapa a presión; sin tornillos |
+| Extremidades (brazos/patas) | Pegados (0,5 mm de juego) | Espigas Ø8/Ø9 con nervios tipo Lego | Brazo recortado abrazando la barriga |
+| Cabeza / Electrónica | Hueco placa rectangular | Carcasa redonda Ø50×13 mm, labio + anillo cónico M55 | Cabeza Φ78 exacta a la foto |
 
 ---
 
@@ -45,14 +45,14 @@ Todas las figuras y vistas que acompañan a esta guía son **renders 3D y captur
 | Letra | Pieza | Archivo STL | Color Impreso | Cant. | Función en el Ensamble |
 |:---:|---|---|:---:|:---:|---|
 | **A** | **Cuerpo** | `cuerpo.stl` | ⬜ Blanco | 1 | Tronco principal. Aloja la batería, 2 taladros para pernos y cajeras press-fit de miembros. |
-| **B** | **Cabeza frontal** | `cabeza_frente.stl` | ⬜ Blanco | 1 | Cara frontal, visor circular, 4 costillas redondas, rosca trapecial M55 y espolón de bayoneta con 3 nervios. |
-| **C** | **Cabeza dorso** | `cabeza_dorso.stl` | ⬜ Blanco | 1 | Cúpula con respiraderos, boca de cuello press-fit, manga con 3 canales helicoidales y cajeras de bayoneta para orejas. |
-| **D** | **Brazo izquierdo** | `brazo_izq.stl` | 🟦/⬜ Bicolor | 1 | Brazo impreso vertical. Puño turquesa (hasta Z=16.5 mm) y hombro blanco. |
-| **E** | **Brazo derecho** | `brazo_der.stl` | 🟦/⬜ Bicolor | 1 | Brazo impreso vertical. Puño turquesa (hasta Z=16.5 mm) y hombro blanco. |
-| **F** | **Pierna izquierda** | `pierna_izq.stl` | 🟦/⬜ Bicolor | 1 | Pierna impresa vertical. Bota turquesa (hasta Z=14.0 mm) y muslo blanco. |
-| **G** | **Pierna derecha** | `pierna_der.stl` | 🟦/⬜ Bicolor | 1 | Pierna impresa vertical. Bota turquesa (hasta Z=14.0 mm) y muslo blanco. |
-| **H** | **Oreja izquierda** | `oreja_izq.stl` | 🟦 Turquesa | 1 | Oreja con bayoneta de ¼ de vuelta (brida + cono + nervio). Sin pegamento. |
-| **I** | **Oreja derecha** | `oreja_der.stl` | 🟦 Turquesa | 1 | Oreja con bayoneta de ¼ de vuelta (brida + cono + nervio). Sin pegamento. |
+| **B** | **Cabeza frontal** | `cabeza_frente.stl` | ⬜ Blanco | 1 | Cara frontal, visor circular, labio de centrado para carcasa Ø50 mm, rosca M55x2 y espolón con 3 llaves rectas asimétricas. |
+| **C** | **Cabeza dorso** | `cabeza_dorso.stl` | ⬜ Blanco | 1 | Cúpula con respiraderos, boca de cuello press-fit, manga con 3 canales para llaves y cajeras con banda reforzada para espigas en D de orejas. |
+| **D** | **Brazo izquierdo** | `brazo_izq.stl` | 🟦/⬜ Bicolor | 1 | Brazo con espiga macho Ø8 mm Lego y recorte curvo que abraza el cuerpo sin colisionar. |
+| **E** | **Brazo derecho** | `brazo_der.stl` | 🟦/⬜ Bicolor | 1 | Brazo con espiga macho Ø8 mm Lego y recorte curvo que abraza el cuerpo sin colisionar. |
+| **F** | **Pierna izquierda** | `pierna_izq.stl` | 🟦/⬜ Bicolor | 1 | Pierna con espiga macho Ø9 mm Lego y nervios de aplastamiento. |
+| **G** | **Pierna derecha** | `pierna_der.stl` | 🟦/⬜ Bicolor | 1 | Pierna con espiga macho Ø9 mm Lego y nervios de aplastamiento. |
+| **H** | **Oreja izquierda** | `oreja_izq.stl` | 🟦 Turquesa | 1 | Oreja con espiga en D Ø8 anti-rotación (impresa tumbada). Sin pegamento. |
+| **I** | **Oreja derecha** | `oreja_der.stl` | 🟦 Turquesa | 1 | Oreja con espiga en D Ø8 anti-rotación (impresa tumbada). Sin pegamento. |
 | **J** | **Collar** | `collar.stl` | 🟦 Turquesa | 1 | Anillo del cuello con muesca pasante para el túnel de carga USB-C. |
 | **K** | **Mochila** | `mochila.stl` | 🟦 Turquesa | 1 | Tapa trasera con 2 cajeras ciegas para los pernos sueltos. Sin tornillos. |
 | **L** | **Botón de sien** | `boton.stl` | 🟦 Turquesa | 1 | Dial estético con 3 surcos concéntricos en la sien derecha. |
@@ -130,21 +130,21 @@ Todas las figuras y vistas que acompañan a esta guía son **renders 3D y captur
 
 ---
 
-### PASO 4 · Cierre del Casco (bayoneta, sin pegamento)
+### PASO 4 · Cierre del Casco (aro a presión con 3 llaves LEGO, sin pegamento)
 
 | Vista Lateral CAD | Vista Frontal CAD | Vista Trasera CAD |
 |:---:|:---:|:---:|
 | ![Lado](../renders/muneco-lado.png) | ![Frente](../renders/muneco-frente.png) | ![Atrás](../renders/muneco-atras.png) |
 
-![Bayoneta del casco, explosionada](../renders/render_x1_bayoneta.png)
+![Ensamble del casco](../manual/diagrams_jpg/step4_bayoneta.jpg)
 
 > ⚠️ **ENSAYO EN SECO:**  
-> Presenta el dorso sobre el espolón de la frente y gira un cuarto de vuelta en vacío, sin forzar. Los 3 nervios asimétricos solo dejan cerrar en UNA orientación: la que deja las orejas a plomo.
+> Presenta el dorso sobre el espolón de la frente. Las 3 llaves asimétricas solo dejan cerrar en UNA orientación: la que deja las orejas a plomo.
 
-1. Presenta `cabeza_dorso.stl` sobre el espolón de `cabeza_frente.stl`, con los 3 nervios encarados a sus 3 canales.
-2. Empuja y gira un cuarto de vuelta hasta que las dos caras se juntan a ras.
-3. No lleva pegamento: la junta se abre girando al revés para inspeccionar la electrónica.
-4. *(Esta junta no se vuelve a abrir sola: los cables no deben sufrir fatiga).*
+1. Presenta `cabeza_dorso.stl` sobre el espolón de `cabeza_frente.stl`, con las 3 llaves rectas encaradas a sus 3 canales.
+2. Empuja recto a presión hasta que las dos caras se juntan a ras.
+3. No lleva pegamento: la junta se abre tirando recto hacia fuera para inspeccionar la electrónica o cables.
+4. *(Esta junta no se vuelve a abrir sola: los nervios de aplastamiento la retienen con firmeza).*
 
 ---
 
@@ -156,9 +156,9 @@ Todas las figuras y vistas que acompañan a esta guía son **renders 3D y captur
    Aplica una gota mínima de cianoacrilato en el reverso del marco negro y pégalo alrededor del cristal de la pantalla en la cara frontal. *(Es una de las 3 únicas piezas que aún llevan pegamento).*
 2. **Orejas (`oreja_izq.stl` y `oreja_der.stl`):**
 
-   ![Bayoneta de la oreja, explosionada](../renders/render_x1_oreja.png)
+   ![Orejas con espiga en D](../manual/diagrams_jpg/step5_oreja.jpg)
 
-   Presenta cada oreja en su cajera (brida contra el plano, cono centrando) y gira un cuarto de vuelta hasta que asienta. Sin pegamento. La izquierda y la derecha no son intercambiables: cada nervio solo entra en su canal.
+   Presenta cada oreja encarando su **espiga en D Ø8** a la cajera reforzada de la cabeza dorso y empuja a presión hasta que asienta. Sin pegamento ni giros: el perfil en D y los nervios fijan la orientación e impiden cualquier rotación.
 3. **Botón de Sien (`boton.stl`):**  
    Pega el disco turquesa con los 3 surcos concéntricos en el rebaje de la sien derecha. *(Es un dial estético de traje espacial).*
 
@@ -197,9 +197,9 @@ Todas las figuras y vistas que acompañan a esta guía son **renders 3D y captur
 1. Comprueba la orientación de las piezas:
    - **Puños y Botas (Turquesa):** Miran siempre hacia abajo.
    - **Hombros y Muslos (Blanco):** Encajan en las cajeras del tronco.
-2. Presenta `brazo_izq.stl` en la cajera del hombro izquierdo y empuja a presión hasta que la cara plana asiente. Sin pegamento: si entra demasiado apretado, una pasada de lija fina al vástago.
-3. Repite con `brazo_der.stl`, `pierna_izq.stl` y `pierna_der.stl`.
-4. Comprueba que ninguna pieza gire loca en su cajera.
+2. Presenta `brazo_izq.stl` (espiga Ø8 mm Lego) en la cajera del hombro izquierdo y empuja a presión hasta que la cara plana asiente. El contorno curvo del brazo abraza la silueta del tronco sin colisionar con la barriga ni la rodilla.
+3. Repite con `brazo_der.stl` (espiga Ø8 mm), `pierna_izq.stl` (espiga Ø9 mm) y `pierna_der.stl` (espiga Ø9 mm). Los nervios de aplastamiento fijan las uniones firmemente sin pegamento.
+4. Comprueba que ninguna pieza baile: la fricción mecánica garantiza una unión sólida y estable.
 
 ---
 

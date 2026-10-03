@@ -24,9 +24,9 @@ os.makedirs(DIAGRAMS_PNG_DIR, exist_ok=True)
 os.makedirs(DIAGRAMS_JPG_DIR, exist_ok=True)
 
 # Exact V15 CAD dimensions from lua-muneco.scad
-Y_CARA = -29.2415
-Y_CORTE = -10.3415
-Z_CAB = 114.0
+Y_CARA = -27.0572
+Y_CORTE = -9.1572
+Z_CAB = 111.0
 RXn = Euler((radians(-90), 0, 0), 'YXZ').to_matrix().to_4x4()
 
 def clean_scene():
@@ -50,9 +50,10 @@ def setup_scene(res_x=1400, res_y=1100):
 
     world = scene.world
     world.use_nodes = True
-    bg = world.node_tree.nodes['Background']
-    bg.inputs['Color'].default_value = (1.0, 1.0, 1.0, 1.0)
-    bg.inputs['Strength'].default_value = 1.0
+    bg = next((n for n in world.node_tree.nodes if n.type == 'BACKGROUND'), None)
+    if bg:
+        bg.inputs['Color'].default_value = (1.0, 1.0, 1.0, 1.0)
+        bg.inputs['Strength'].default_value = 1.0
 
     # Key light: Technical illumination
     l1 = bpy.data.lights.new('Sun1', type='SUN')
@@ -87,7 +88,7 @@ def get_mat(name, color, roughness=0.55):
         return bpy.data.materials[name]
     mat = bpy.data.materials.new(name=name)
     mat.use_nodes = True
-    bsdf = mat.node_tree.nodes['Principled BSDF']
+    bsdf = next(n for n in mat.node_tree.nodes if n.type == 'BSDF_PRINCIPLED')
     bsdf.inputs['Base Color'].default_value = color
     bsdf.inputs['Roughness'].default_value = roughness
     return mat

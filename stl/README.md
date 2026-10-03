@@ -11,25 +11,25 @@
 
 | Archivo STL | Cant. | Color sugerido | Huella X × Y × Z (mm) | Volumen | Observaciones técnicas y montaje |
 | :--- | :---: | :--- | :---: | :---: | :--- |
-| **`testigo_placa.stl`** | 1 | Cualquier color | 49.5 × 51.0 × 8.0 | 3.0 cm³ | **Probeta 1 (Imprimir primero):** Comprueba ajuste perimetral de PCB y ranura USB-C. |
-| **`testigo_rosca.stl`** | 1 | Cualquier color | 61.0 × 61.0 × 12.0 | 5.3 cm³ | **Probeta 2 (Imprimir con balsa/raft):** Comprueba rosca M55 con `anillo_placa`. |
-| **`anillo_placa.stl`** | 1 | Blanco / Libre | 64.3 × 64.3 × 11.0 | 8.3 cm³ | **Retención de PCB:** Se enrosca tras la placa (recorrido para PCB de 8 a 16 mm). Con soportes de árbol. |
-| **`cabeza_frente.stl`** | 1 | Blanco | 84.4 × 84.5 × 25.9 | 27.6 cm³ | Visor circular y rosca M55. Con espolón de bayoneta (3 nervios). |
-| **`cabeza_dorso.stl`** | 1 | Blanco | 87.0 × 85.5 × 53.8 | 34.9 cm³ | Cúpula con respiraderos y manga de bayoneta. Usar brim 5 mm. |
-| **`cuerpo.stl`** | 1 | Blanco | 75.4 × 65.5 × 80.0 | 163.5 cm³ | Tronco principal. Aloja celda de litio, cuello, cajetas press-fit para miembros y cajeta hembra para emblema. |
-| **`brazo_izq.stl`** | 1 | Blanco + Turquesa | 20.0 × 19.0 × 41.5 | 7.4 cm³ | Espiga macho Ø6 mm press-fit tipo Lego. Turquesa de 0 a 16,5 mm; Blanco desde 16,5 mm. |
-| **`brazo_der.stl`** | 1 | Blanco + Turquesa | 20.0 × 19.0 × 41.5 | 7.4 cm³ | Espiga macho Ø6 mm press-fit tipo Lego. Turquesa de 0 a 16,5 mm; Blanco desde 16,5 mm. |
-| **`pierna_izq.stl`** | 1 | Blanco + Turquesa | 28.3 × 23.7 × 40.6 | 11.7 cm³ | Espiga macho Ø7 mm press-fit tipo Lego. Turquesa de 0 a 14,0 mm; Blanco desde 14,0 mm. |
-| **`pierna_der.stl`** | 1 | Blanco + Turquesa | 28.3 × 23.7 × 40.6 | 11.7 cm³ | Espiga macho Ø7 mm press-fit tipo Lego. Turquesa de 0 a 14,0 mm; Blanco desde 14,0 mm. |
-| **`oreja_izq.stl`** | 1 | Turquesa | 30.0 × 27.3 × 12.0 | 2.7 cm³ | Bayoneta de 1/4 de vuelta (con balsa bajo el vástago). |
-| **`oreja_der.stl`** | 1 | Turquesa | 30.0 × 27.3 × 12.0 | 2.7 cm³ | Bayoneta de 1/4 de vuelta (con balsa bajo el vástago). |
-| **`collar.stl`** | 1 | Turquesa | 34.4 × 36.6 × 8.4 | 3.0 cm³ | Colocar en el cuello antes de montar la cabeza. Muesca orientada al frente. |
-| **`mochila.stl`** | 1 | Turquesa | 48.0 × 36.0 × 10.4 | 14.6 cm³ | Tapa trasera sobre 2 pernos sueltos (sin tornillos; abre tirando). |
+| **`testigo_placa.stl`** | 1 | Cualquier color | 63.2 × 59.7 × 2.4 | 2.2 cm³ | **Probeta 1 (Imprimir primero):** Comprueba ajuste de carcasa Ø50 y ranura USB-C. |
+| **`testigo_rosca.stl`** | 1 | Cualquier color | 58.8 × 58.8 × 12.0 | 5.1 cm³ | **Probeta 2 (Imprimir con balsa/raft):** Comprueba rosca M55 con `anillo_placa`. |
+| **`anillo_placa.stl`** | 1 | Blanco / Libre | 55.0 × 55.0 × 9.0 | 1.7 cm³ | **Retención de PCB:** Asiento cónico a 45° (recoge 5 a 18 mm). Con soportes de árbol. |
+| **`cabeza_frente.stl`** | 1 | Blanco | 75.7 × 75.3 × 24.9 | 24.3 cm³ | Visor circular, labio Ø50 y rosca M55. Espolón con 3 llaves rectas asimétricas. |
+| **`cabeza_dorso.stl`** | 1 | Blanco | 78.0 × 76.3 × 48.1 | 30.7 cm³ | Cúpula con respiraderos, manga 3 canales y banda de refuerzo. Brim 5 mm. |
+| **`cuerpo.stl`** | 1 | Blanco | 75.4 × 65.5 × 80.0 | 162.3 cm³ | Tronco principal. Aloja batería, cuello, cajetas miembros Lego y cajeta pecho. |
+| **`brazo_izq.stl`** | 1 | Blanco + Turquesa | 20.0 × 18.2 × 42.1 | 6.0 cm³ | Espiga macho Ø8 mm Lego. Recorte curvo que abraza la barriga sin colisiones. |
+| **`brazo_der.stl`** | 1 | Blanco + Turquesa | 20.0 × 18.2 × 42.1 | 6.0 cm³ | Espiga macho Ø8 mm Lego. Recorte curvo que abraza la barriga sin colisiones. |
+| **`pierna_izq.stl`** | 1 | Blanco + Turquesa | 28.3 × 23.7 × 40.9 | 11.9 cm³ | Espiga macho Ø9 mm Lego con nervios de aplastamiento. |
+| **`pierna_der.stl`** | 1 | Blanco + Turquesa | 28.3 × 23.7 × 40.9 | 11.9 cm³ | Espiga macho Ø9 mm Lego con nervios de aplastamiento. |
+| **`oreja_izq.stl`** | 1 | Turquesa | 30.0 × 26.7 × 8.2 | 2.6 cm³ | Espiga en D Ø8 anti-rotación (impresa tumbada). Sin pegamento. |
+| **`oreja_der.stl`** | 1 | Turquesa | 30.0 × 26.7 × 8.2 | 2.6 cm³ | Espiga en D Ø8 anti-rotación (impresa tumbada). Sin pegamento. |
+| **`collar.stl`** | 1 | Turquesa | 34.4 × 36.6 × 8.5 | 4.0 cm³ | Deslizar al cuello antes de montar la cabeza. Muesca al frente. |
+| **`mochila.stl`** | 1 | Turquesa | 48.0 × 36.0 × 10.4 | 14.6 cm³ | Tapa trasera a presión sobre 2 pernos sueltos (sin tornillos; abre tirando). |
 | **`pernos_mochila.stl`** | 1 | Blanco / Libre | 20.6 × 4.0 × 4.0 | 0.2 cm³ | Los 2 pernos Ø4 en una pieza con lengüeta rompible. |
-| **`boton.stl`** | 1 | Turquesa | 15.0 × 15.0 × 3.4 | 0.5 cm³ | Detalle estético pegado en la sien derecha. |
-| **`emblema.stl`** | 1 | Turquesa | 22.0 × 22.0 × 4.2 | 1.3 cm³ | Tetón macho stud tipo Lego (h = 1,8 mm). Entra a presión en el pecho; aloja la pastilla del logo. |
-| **`logo.stl`** | 1 | Blanco | 14.9 × 14.9 × 1.6 | 0.3 cm³ | **[NUEVO]** Silueta icónica de Lúa. Se encaja y pega dentro del emblema. |
-| **`pulsadores.stl`** | 1 | Oscuro / Negro | 28.3 × 14.3 × 18.6 | 0.9 cm³ | Guía de botones bajo barbilla (con soportes de árbol). |
+| **`boton.stl`** | 1 | Turquesa | 15.0 × 15.0 × 3.4 | 0.5 cm³ | Detalle estético dial pegado en la sien derecha. |
+| **`emblema.stl`** | 1 | Turquesa | 22.6 × 22.0 × 5.2 | 1.7 cm³ | Tetón macho stud tipo Lego con nervios. Entra a presión en el pecho. |
+| **`logo.stl`** | 1 | Blanco | 14.9 × 14.9 × 1.6 | 0.3 cm³ | Silueta icónica de Lúa. Se encaja y pega dentro del emblema. |
+| **`pulsadores.stl`** | 1 | Oscuro / Negro | 28.3 × 10.8 × 9.8 | 0.6 cm³ | Guía de botones bajo barbilla (con soportes de árbol). |
 | **`cartucho.stl`** | 1 | Blanco / Libre | 33.2 × 9.2 × 23.2 | 2.5 cm³ | Cuna interior para sujetar la celda de litio con cinta doble cara. |
 | **`aro_visor.stl`** | 1 | Oscuro (Gris/Negro)| 44.0 × 44.0 × 1.6 | 0.9 cm³ | Marco circular del visor. Oculta la junta del cristal de la pantalla. |
 
