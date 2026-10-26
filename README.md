@@ -1,19 +1,13 @@
-# 🐈‍⬛ Lúa · Mascota física circular + Construye con Lúa
-
-Lúa es la mascota de [Valeria+](https://github.com/FrankBetances/Valeria) y de **Descubre con Lúa**.  
-El producto físico es una sola cosa: el **muñeco básico versión 4** (PLA, masque3d Orense) con la **placa redonda V1** (ESP32-C3 + GC9A01 240×240 circular Ø32,4 mm) integrada en la cabeza.
-
-La app decide. Lúa reacciona en la pantalla.  
-No mide, no puntúa, no guarda, **no escucha** y **no se mueve**.
-
-El eje del producto es **Construye con Lúa**: mundos de juguete vivos hechos de bloques físicos modulares (paso Duplo 31,80 mm) + Realidad Aumentada local. Cada manipulación tiene consecuencia inmediata en Lúa y en el desarrollo del niño.
-
 <div align="center">
+
+# 🐈‍⬛ Proyecto Lúa · Juguete STEAM con Bloques y Realidad Aumentada
+
+### Versión básica con placa V1 ampliada mediante sets complementarios tipo LEGO y Realidad Aumentada para Valeria+ y Descubre con Lúa
 
 ![C++17](https://img.shields.io/badge/C%2B%2B-17-00599C?style=flat-square&logo=cplusplus&logoColor=white)
 ![Placa V1 Oficial](https://img.shields.io/badge/placa%20oficial-V1%20·%20ESP32--C3%20·%20GC9A01%20redondo-0a7d54?style=flat-square&logo=espressif&logoColor=white)
-![Muñeco básico v4](https://img.shields.io/badge/muñeco%20básico-versión%204%20·%20PLA%20·%20masque3d-0a7d54?style=flat-square)
-![Construye con Lúa + AR](https://img.shields.io/badge/Construye%20con%20Lúa-bloques%20Duplo%20(31,8%20mm)%20%2B%20AR%20local-00c4be?style=flat-square)
+![Juguete STEAM + AR](https://img.shields.io/badge/STEAM%20%2B%20AR-bloques%20tipo%20LEGO%20Duplo%20(31,8%20mm)-00c4be?style=flat-square)
+![Sets Específicos](https://img.shields.io/badge/sets%20específicos-Valeria%2B%20·%20Descubre%20con%20Lúa-0a7d54?style=flat-square)
 ![Blender bpy](https://img.shields.io/badge/CAD-Blender%20bpy%20100%25%202--manifold-ea7600?style=flat-square&logo=blender&logoColor=white)
 ![Versión Robot Descartada](https://img.shields.io/badge/versión%20robot-descartada%20(oct%202026)-8a8a8a?style=flat-square)
 ![Sin Micrófono](https://img.shields.io/badge/micrófono-bloqueado%20en%20firmware-b3261e?style=flat-square)
@@ -23,25 +17,29 @@ El eje del producto es **Construye con Lúa**: mundos de juguete vivos hechos de
 
 ---
 
-## 🧭 Decisión de Producto (23/10/2026)
+## 🧭 Visión General y Decisión de Producto (Octubre 2026)
+
+**Lúa** es la mascota física interactiva de **[Valeria+](https://github.com/FrankBetances/Valeria)** y de **Descubre con Lúa**: una figura tangible con pantalla IPS circular de 240×240 px (32,4 mm de área activa a 27 fps) que espeja el refuerzo positivo, muestra los 120 pictogramas voxel del ejercicio, las 45 insignias y el progreso de nivel, porque **la niña o el niño mira a la mascota y manipula piezas físicas en lugar de tocar la pantalla de la tableta**.
+
+Por decisión de dirección (**23/10/2026**):
 
 1. **Se descarta definitivamente la versión robótica (`busto` motorizado de 4 DoF / 9 ejes tipo Reachy Mini):** Lúa no lleva motores, servos ni partes móviles motorizadas.
-2. **Un único producto físico:** el muñeco básico versión 4 con la placa redonda V1 (`ESP32-2424S012C`) en la cabeza, que muestra en su pantalla circular el refuerzo positivo, los 120 pictogramas voxel del ejercicio, las 45 insignias y el progreso de nivel, porque **la niña o el niño mira a Lúa y manipula piezas físicas en lugar de tocar la pantalla de la tableta**.
-3. **Construye con Lúa como eje:** sets de bloques modulares (paso Duplo 31,80 mm) + Realidad Aumentada local, específicos e interoperables para dos plataformas:
+2. **Nos quedamos exclusivamente con la versión básica con la placa redonda V1 (`ESP32-2424S012C`), ampliada con sets complementarios tipo LEGO (`Lúa Construye`, paso Duplo de 31,80 mm):** la mascota física funciona como pieza central de un **juguete STEAM manipulativo de construcción por bloques y Realidad Aumentada (AR)**.
+3. **Sets específicos e interoperables para dos plataformas:**
    - **Sets para Valeria+ (Terapia Auditivo-Verbal, Estimulación Sensorial y AR Clínica):** bloques con texturas hápticas, cilindros de prensión gradual, resonadores acústicos, canales para praxias de soplo y dinámicas de **Realidad Aumentada** (`ARCore + Google MediaPipe + Google Filament` nativo con mallas `.glb < 100 KB` y condicionamiento motor puro).
    - **Sets para Descubre con Lúa (Educación Infantil 0–6 años LOMLOE, STEAM y AR Educativa):** tableros y baldosas algorítmicas (*Lúa Camiños*), curvas, intersecciones, rampas de 15°/30°, guiado analógico de esferas y zócalo marcador de la gata, sincronizados con la app Flutter offline (`CustomPainter` vectorial, cero red, bilingüe gl/es, consignas **TPR en inglés** verificadas con SHA-256 y dinámicas espaciales de Realidad Aumentada).
 
 <div align="center">
-  <img src="renders/render_estilizado_iso.png" alt="Muñeco básico Lúa versión 4 con placa redonda V1 integrada" width="380">
+  <img src="renders/render_estilizado_iso.png" alt="Muñeco básico Lúa con placa redonda V1 integrada" width="380">
   <img src="renders/render_estilizado_frente.png" alt="Vista frontal de la versión básica de Lúa" width="380">
 </div>
 
 ---
 
-## 🧱 Arquitectura de Construye con Lúa: Muñeco Básico v4 + Bloques Duplo + Realidad Aumentada
+## 🧱 Arquitectura del Ecosistema: Muñeco Básico + Bloques tipo LEGO + Realidad Aumentada
 
 ```
-               MUÑECO BÁSICO V4 CON PLACA V1 (ESP32-C3 · GC9A01 Ø32,4 mm)  
+               VERSIÓN BÁSICA LÚA CON PLACA V1 (ESP32-C3 · GC9A01 Ø32,4 mm)
         ┌───────────────────────────────────────────────────────────────────────┐
         │  • Figura física en PLA sin motores, sin tornillos ni pegamento       │
         │  • Carcasa de placa Ø50 × 13 mm sujeta con rosca dinámica M55 y X     │
@@ -75,7 +73,7 @@ El eje del producto es **Construye con Lúa**: mundos de juguete vivos hechos de
 
 ---
 
-## 🧩 1. Construye con Lúa: Sets de Bloques y Realidad Aumentada
+## 🧩 1. Los Sets Complementarios Tipo LEGO y Realidad Aumentada
 
 Toda la familia de bloques complementarios se modela de forma 100 % procedural en **Blender (`Python bpy`)** con geometría 2-manifold cerrada, cumpliendo la directiva europea de seguridad en juguetes **EN 71-1** (todas las piezas superan el cilindro de partes pequeñas de **31,75 mm** para menores de 36 meses).
 
@@ -114,7 +112,7 @@ Toda la familia de bloques complementarios se modela de forma 100 % procedural e
 
 ---
 
-## 🛠️ 2. El Muñeco Básico Versión 4 con Placa V1 (Hardware y Carcasa)
+## 🛠️ 2. La Versión Básica de Lúa con Placa Ampliada (Hardware y Carcasa)
 
 ### Electrónica: Placa Oficial V1 (`ESP32-2424S012C`)
 
@@ -129,7 +127,7 @@ Toda la familia de bloques complementarios se modela de forma 100 % procedural e
   <img src="manual/medidas_hardware/medida_grosor_13mm.png" alt="Medida empírica del grosor de la carcasa: 13 mm" width="320">
 </div>
 
-### Diseño Mecánico del Muñeco Básico v4 (100 % en Blender · Ajuste Dinámico Tipo LEGO)
+### Diseño Mecánico del Muñeco Básico (100 % en Blender · Ajuste Dinámico Tipo LEGO)
 
 - **Cero motores, cero tornillos y cero pegamento estructural:** todas las uniones emplean encajes tipo LEGO, roscas trapeciales robustas o bayonetas con tope y clic.
 - **Sujeción dinámica de la placa (`anillo_placa` con refuerzo en X):** barril roscado M55 de 33 mm (8,3 vueltas) con cono centrador a 45°, arandela-muelle elástica y anillo trasero cerrado por dos brazos en **X** (5 × 4 mm) para girar con los dedos y evitar cualquier desplazamiento de la placa dejando cuatro pasos libres para el cable de batería.
